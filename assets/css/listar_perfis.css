@@ -1,0 +1,382 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --cor-primaria-botao-white: white; 
+  --cor-primaria-botao-green: green;
+  --cor-primaria-botao-red:   red;
+  --cor-primaria-botao-yellow:rgba(255, 199, 0, 1);
+  --cor-primaria-botao-blue:  rgba(6, 74, 140, 1);
+}
+
+.tela_gerenciam_perfis{
+  max-width: 832px;
+  /* max-height: 100vh; */
+  height: 100vh; 
+  overflow-y: hidden;
+  position: relative;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Montserrat';
+  margin-bottom: 10px;
+
+}
+
+
+li{
+  list-style: none;
+ 
+}
+
+.container_gp{
+width: 100%;
+height: 58vh;
+display: flex;
+flex-direction: column;
+align-items: center;
+max-height: 65vh
+}
+
+.cardsgerenc{
+display: flex;
+flex-direction: column;
+width: 94%;
+height: 50vh;
+max-width: 832px;
+background-color: rgb(255, 255, 255);
+overflow: hidden;
+overflow-y: scroll;
+border-radius: 10px;
+padding: 5px;
+}
+
+
+.cardsgerenc::-webkit-scrollbar{
+width: 8px;
+background-color: #eeeeee;
+border-radius: 10px;
+}
+
+.cardsgerenc::-webkit-scrollbar-thumb{
+background-color: #FAA916;
+border-radius: 10px; 
+} 
+.titulo_gp{
+  width: 100%;
+  display: flex;
+  font-size: 23px;
+  font-weight: bold;
+  color: black; 
+}
+
+
+
+.Perfis{
+  width: 92%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-family: 'Montserrat';
+  font-size: 45px;
+  margin-bottom: 20px;
+}
+
+
+@media screen and (max-width:610px ){
+
+  .Perfis{
+    font-size: 30px;
+  }
+
+}
+
+@media screen and (max-width:350px ){
+
+  .Perfis{
+    font-size: 25px;
+  }
+
+}
+
+.card_perfil{
+display: flex;
+align-items: center;
+justify-content: space-between;
+background-color: #F9F8F8;
+width: 99%;
+min-height: 90px;
+border-radius: 18px;
+margin-bottom: 2vh;
+box-shadow: 1px 4px 4px 1px rgba(0, 0, 0, 0.25);
+padding-left: 10px;
+padding-right: 20px; 
+}
+
+.tipo_perfil{
+color: #000;
+font-size: 19px;
+font-style: normal;
+font-weight: 600;
+line-height: 140%; /* 33.6px */
+letter-spacing: 0.2px;
+margin-right: 20px;
+font-family: 'Montserrat';
+}
+.btn_excluir{
+  position: relative;
+}
+.funcao{
+color: #000;
+font-size: 14px;
+font-style: normal;
+font-weight: 600;
+line-height: 140%; /* 19.6px */
+letter-spacing: 0.2px;
+border-radius: 13px;
+background: linear-gradient(0deg, rgba(250, 169, 22, 0.30) 0%, rgba(250, 169, 22, 0.30) 100%), #FFF;
+display: flex;
+padding: 5px;
+
+}
+.icone_perfil{
+width: 59px;
+height: 63px;
+box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+margin-right: 20px;
+}
+
+.icone_editar{
+width: 24px;
+height: 24px;
+margin: 12px;
+display: flex;
+
+}
+
+.card_nome {
+width: 830px;
+height: 50px;
+margin: 10px;
+display: flex;
+align-items: center;
+flex-direction: row;
+justify-content: flex-start;
+padding-left: 10px;
+}
+
+.icons-question1{
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+width: 120px;
+/* gap: 22.5px; */
+}
+
+/* KKKKKKKKKKKKKKKKKKKKKKKkkkkkkkkkKKKKK */
+@media screen and (max-width:710px ){
+  .icons-question1{
+    width: 135px;
+  }
+}
+@media screen and (max-width:660px ){
+  .icons-question1{
+    width: 155px;
+  }
+}
+@media screen and (max-width:535px ){
+  .icons-question1{
+    width: 180px;
+  }
+}
+@media screen and (max-width:450px ){
+  .icons-question1{
+    width: 195px;
+  }
+}
+@media screen and (max-width:410px ){
+  .icons-question1{
+    width: 215px;
+  }
+}
+@media screen and (max-width:370px ){
+  .icons-question1{
+    width: 240px;
+  }
+}
+@media screen and (max-width:350px ){
+  .icons-question1{
+    width: 285px;
+  }
+}
+
+
+.bi.bi-pencil-square{
+font-size: 30px;
+color: black;
+cursor: pointer;
+}
+
+.bi-trash{
+font-size: 30px;
+color: rgb(255, 89, 89);
+cursor: pointer;
+}
+
+
+.container_gp2 {
+
+  width: 100%;
+  display: flex;
+
+}
+.botao-padrao-cadastrar{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.botao-cadastrar-submit{
+  width: 180px;
+  height: 45px;
+  background-color: var(--cor-primaria-botao-white);
+  border: 3px solid var(--cor-primaria-botao-green);
+  border-radius: 20px;
+  cursor: pointer;
+  color: var(--cor-primaria-botao-green);
+  font-style: normal;
+  font-family: 'Montserrat';
+  font-weight: bold;
+  font-size: 15px;
+  
+}
+
+.botao-cadastrar-submit:hover{
+  transition: all 0.4s;
+  background-color: var(--cor-primaria-botao-green);
+  color: var(--cor-primaria-botao-white);
+}
+
+
+
+.botao-padrao-voltar{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.botao-voltar-submit{
+  position: relative;
+  width: 180px;
+  height: 45px;
+  background-color: transparent;
+  border: 3px solid var(--cor-primaria-botao-yellow);
+  border-radius: 20px;
+  cursor: pointer;
+  color: var(--cor-primaria-botao-yellow);
+  font-style: normal;
+  font-family: 'Montserrat';
+  font-weight: bold;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.botao-voltar-submit:hover{
+  transition: all 0.4s;
+  background-color: var(--cor-primaria-botao-yellow);
+  color: var(--cor-primaria-botao-white);
+}
+
+.alinar-botoes{
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 50px;
+}
+
+
+/* CSS Botão Cadastrar */
+  
+.botao-cadastrar-link {
+  position: relative;
+  width: 180px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: 3px solid var(--cor-primaria-botao-green);
+  border-radius: 20px;
+  cursor: pointer;
+  color: var(--cor-primaria-botao-green);
+  font-family: 'Montserrat', sans-serif; /* Corrigir a propriedade font-family */
+  font-weight: bold;
+  font-size: 15px;
+  text-decoration: none; /* Adicionar sublinhado ao texto do link */
+}
+
+.botao-cadastrar-link:hover {
+transition: all 0.4s;
+background-color: var(--cor-primaria-botao-green);
+color: var(--cor-primaria-botao-white);
+}
+
+.issotabugado{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.pai-de-todos{
+  width: 100%;
+  display: flex;
+}
+
+@media(max-width: 550px){
+  .botao-cadastrar-link{
+    width: 160px;
+  }
+
+  .botao-voltar-submit{
+    width: 160px;
+  }
+
+  .botao-padrao-cadastrar {
+    width: 36%;
+  }
+
+  .botao-padrao-voltar {
+    width: 36%;
+  }
+
+  .bi.bi-pencil-square{
+    font-size: 25px;
+  }
+
+  .bi-trash{
+    font-size: 25px;
+  }
+
+}
+
+.pai-de-todos{
+  display: flex;
+  width: 100%;
+}
+
+.renner{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}

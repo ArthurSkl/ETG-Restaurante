@@ -1,0 +1,231 @@
+/* Css input */
+
+
+.input_group.field{
+  width: 100%;
+  max-width: 700px;
+  min-width: 300px;
+}
+
+.input_group {
+    position: relative;
+    padding: 20px 0 0;
+    width: 100%;
+    
+  }
+  
+  .input_field {
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #9b9b9b;
+    outline: 0;
+    color: black;
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    left: 10%;
+  }
+   
+  .input_field::placeholder {
+    color: transparent;
+  }
+  
+  .input_field:placeholder-shown ~ .input_label {
+    font-size: 17px;
+    cursor: text;
+    top: 37px;
+    left: 10px;
+  }
+  
+  .input_label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.3s;
+    color: #9b9b9b;
+    pointer-events: none;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    left: 10px;
+    
+  }
+  
+  .input_field:focus {
+    padding-bottom: 6px;
+    font-weight: 700;
+    border-width: 3px;
+    border-image-slice: 1;
+   
+  }
+  
+  .input_field:focus ~ .input_label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.3s;
+    font-size: 17px;
+    font-weight: 700;
+    left: 10px;
+  }
+  
+  .input_field:required, .input_field:invalid {
+    box-shadow: none;
+  }
+
+/* Css input Senha */
+
+.input_senha_group.field{
+  width: 100%;
+  max-width: 700px;
+  min-width: 300px;
+}
+
+.input_senha_group {
+    position: relative;
+    padding: 20px 0 0;
+    width: 100%;
+  }
+  
+  .input_senha_field {
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #9b9b9b;
+    outline: 0;
+    color: black;
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    left: 10px;
+  }
+  
+  .input_senha_field::placeholder {
+    color: transparent;
+  }
+  
+  .input_senha_field:placeholder-shown ~ .input_senha_label {
+    font-size: 17px;
+    cursor: text;
+    top: 37px;
+    left: 10px;
+  }
+  
+  .input_senha_label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    color: #9b9b9b;
+    pointer-events: none; 
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    left: 10px;
+  }
+  
+  .input_senha_field:focus {
+    padding-bottom: 6px;
+    font-weight: 700;
+    border-width: 3px;
+    border-image-slice: 1;
+  }
+  
+  .input_senha_field:focus ~ .input_senha_label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 17px;
+    font-weight: 700;
+    left: 10px;
+  }
+  
+  .input_senha_field:required, .input_senha_field:invalid {
+    box-shadow: none;
+  }
+
+/* Css input Email */
+
+.input_e-mail_group.field{
+  width: 100%;
+  max-width: 700px;
+  min-width: 300px;
+}
+
+.input_e-mail_group {
+  position: relative;
+  padding: 20px 0 0;
+  width: 100%;
+}
+
+.input_e-mail_field {
+   width: 100%;
+    border: none;
+    border-bottom: 2px solid #9b9b9b;
+    outline: 0;
+    color: black;
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    left: 10px;
+}
+
+.input_e-mail_field::placeholder {
+  color: transparent;
+}
+
+.input_e-mail_field:placeholder-shown ~ .input_e-mail_label {
+  font-size: 17px;
+  cursor: text;
+  top: 37px;
+  left: 10px;
+}
+
+.input_e-mail_label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.3s;
+  color: #9b9b9b;
+  pointer-events: none;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  left: 10px;
+}
+
+.input_e-mail_field:focus {
+  padding-bottom: 6px;
+  font-weight: 700;
+  border-width: 3px;
+  border-image-slice: 1;
+}
+
+.input_e-mail_field:focus ~ .input_e-mail_label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.3s;
+  font-size: 17px;
+  font-weight: 700;
+  left: 10px;
+}
+
+.input_e-mail_field:required, .input_e-mail_field:invalid {
+  box-shadow: none;
+}

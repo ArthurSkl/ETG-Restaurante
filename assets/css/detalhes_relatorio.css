@@ -1,0 +1,279 @@
+*{margin: 0;
+    padding: 0;
+    box-sizing: 0;}
+    
+  :root{
+      --cor-primaria-botao-white: white; 
+      --cor-primaria-botao-green: green;
+      --cor-primaria-botao-red:   red;
+      --cor-primaria-botao-yellow:rgba(255, 199, 0, 1);
+      --cor-primaria-botao-blue:  rgba(6, 74, 140, 1);
+      ;
+  }
+.todas_nao_conf{
+    padding-left: 2%;
+    width: 100%;
+}
+.tela_detalhes{
+    width: 100%;
+    max-width: 830px;
+    margin: auto;
+}
+.titulo{
+    width: 100%;
+    text-align: center;
+    font-size: 32px;
+    /* margin-bottom: 20px; */
+    
+}
+.dados_responsavel{
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    font-size: 20px;
+    margin-left: 1%;
+}
+.esquerda{
+    width: 96%;
+    display: flex;
+    justify-content: space-around;
+    
+}
+/* .nome{
+    padding-right: 27%;
+} */
+
+.direita{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.area_nao_conformidade{
+    
+    flex-direction: column;
+    width: 96%;
+    height: 64vh;
+    max-width: 832px;
+    background-color: rgb(255, 255, 255);
+    overflow: hidden;
+    overflow-y: scroll;
+    border-radius: 10px;
+    padding: 5px;
+}
+.titulo_nao_conformidade{
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.nao_conformidade{
+    width: 96%;
+    height: 280px;
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    /* background-color: rgb(187, 40, 40); */
+    border: solid black 1px;
+    box-shadow: 2px 2px 8px 0px;
+}
+.texto_nao_conformidade{
+    height: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    text-align: start;
+    width: 99%;
+    font-size: 16px;
+}
+
+
+.area_nao_conformidade::-webkit-scrollbar{
+    width: 8px;
+    background-color: #eeeeee;
+    border-radius: 10px;
+}
+    
+.area_nao_conformidade::-webkit-scrollbar-thumb{
+    background-color: #FAA916;
+    border-radius: 10px; 
+} 
+
+.area_imagens{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.imagem_nao_conformidade{
+    width: 160px;
+    height: 160px;
+    border-radius: 15px;
+    /* margin-right: 5%; */
+    /* background-color: red; */
+}
+/* .data_abertura{
+    width: 98%;
+    display: flex;
+    justify-content: end;
+} */
+/* .view_imagem{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    background-color: red;
+    background-color: rgba(115, 115, 115, 0.522);
+    z-index: 100000000000000000000000000000000000000000000000000000000000000000000;
+} */
+
+/* .imagem_expandida{
+    width: 60%;
+    height: 65%;
+    border-radius: 15px;
+} */
+
+@media print {
+    @page {
+        size: A4; /* Você pode usar outros tamanhos como A3, carta (letter), etc. */
+        margin: 1cm; /* Define as margens de cada folha */
+      }
+    
+      /* Define a quebra de página após cada terceiro elemento nao_conformidade */
+      .nao_conformidade:not(:first-child):nth-child(3n) {
+        page-break-after: always;
+      }
+    .url-bar {
+        display: none !important;
+      }
+    .cabecalho-menu{
+        display: none;
+    }
+    .area_botões{
+        display: none;
+    }
+    .area_voltar{
+        display: none;
+    }
+    .gerar_relatorio{
+        display: none;
+    }
+    .area_nao_conformidade {
+        flex-direction: column;
+        margin-left: 2%;
+        width: 100%; 
+        height: 100%;
+        max-width: 832px;
+        background-color: rgb(255, 255, 255);
+        /* overflow: hidden; */
+        /* overflow-y: scroll; */
+        border-radius: 10px;
+        padding: 5px;
+    }
+    
+}
+
+.area_botões{
+    position: relative;
+    width: 97%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+/* .botao-padrao-voltar{
+    width: 100%;
+    border-radius: 20px;
+    border: solid black 1px;
+    background-color: #FAA916;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .gerar_relatorio{
+    margin-right: 8%;
+  }
+  .imprimir{
+    width: 100%;
+    border-radius: 20px;
+    border: solid #249e24 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  } 
+
+.botao-voltar-link{
+    
+   
+    padding: 10px 60px;
+    background-color: var(--cor-primaria-botao-white);
+    border: 3px solid var(--cor-primaria-botao-yellow);
+    border-radius: 20px;
+    cursor: pointer;
+    
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    text-decoration: none;
+} */
+
+
+
+
+.botao-padrao-voltar {
+    /* width: 100%; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.botao-voltar-link {
+    /* width: 110px; */
+    display: inline-block;
+    padding: 12px 60px;
+    background-color: transparent;
+    border: 3px solid var(--cor-primaria-botao-yellow);
+    border-radius: 20px;
+    cursor: pointer;
+    color: var(--cor-primaria-botao-yellow);
+    font-family: 'Montserrat', sans-serif; /* Corrigir a propriedade font-family */
+    font-weight: bold;
+    font-size: 15px;
+    text-decoration: none; /* Adicionar sublinhado ao texto do link */
+}
+
+.botao-voltar-link:hover {
+    transition: all 0.4s;
+    background-color: var(--cor-primaria-botao-yellow);
+    color: var(--cor-primaria-botao-white);
+} -->
+
+.botao-padrao-cadastrar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.botao-cadastrar-link {
+    /* width: 110px; */
+    display: inline-block;
+    padding: 12px 57px;
+    background-color: transparent;
+    border: 3px solid var(--cor-primaria-botao-green);
+    border-radius: 20px;
+    cursor: pointer;
+    color: var(--cor-primaria-botao-green);
+    font-family: 'Montserrat', sans-serif; /* Corrigir a propriedade font-family */
+    font-weight: bold;
+    font-size: 15px;
+    text-decoration: none; /* Adicionar sublinhado ao texto do link */
+}
+
+.botao-cadastrar-link:hover {
+    transition: all 0.4s;
+    background-color: var(--cor-primaria-botao-green);
+    color: var(--cor-primaria-botao-white);
+} -->

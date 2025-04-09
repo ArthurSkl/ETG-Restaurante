@@ -1,0 +1,738 @@
+@import url(https://fonts.google.com/specimen/Montserrat);
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: "Montsserat";
+  font-style: normal;
+}
+
+.container-menu{
+  height: 70px;
+  left: 2%;
+  width: 70px;
+  background-color: #fff;
+  border-radius: 50px;
+  cursor: pointer;
+  position: absolute;
+  transition: 0.4s ease;
+  box-shadow: 2px 5px 5px rgb(103, 103, 103);
+  z-index: 3;
+}
+
+.container-menu.active {
+  height: 90vh;
+  border: 1px solid #FAA916;
+}
+
+.toggleBox-menu{
+  position: relative;
+  display: block;
+  height: 70px;
+  width: 70px;
+  border-radius: 50px;
+} 
+   
+.icon-menu{
+  position: absolute;
+  height: 4px;
+  width: 35px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #FAA916;
+  border-radius: 50px;
+}
+
+.toggleBox-menu.active .icon-menu{
+  width: 0;
+}
+  
+.icon-menu::before, .icon-menu::after{
+  position: absolute;
+  content: '';
+  height: 4px;
+  width: 35px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #FAA916;
+  border-radius: 50px;
+  transition: 0.3s;
+}
+  
+.icon-menu::before{
+  top: 12px;
+}
+  
+.icon-menu::after{
+  bottom: 8px;
+}
+  
+.toggleBox-menu.active .icon-menu::before{
+  width: 40px;
+  transform-origin: right;
+  transform: translate(-25px, 4px) rotate(45deg);
+}
+  
+.toggleBox-menu.active .icon-menu::after{
+  width: 40px;
+  transform-origin: right;
+  transform: translate(-25px, -6px) rotate(-45deg);
+}
+
+.navItems-menu{
+  width: 100%; 
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Montsserat";
+  font-style: normal;
+}
+  
+.container-menu.active .navItems-menu{
+  visibility: visible;
+}
+  
+.li-menu{
+  list-style: none;
+  position: relative;
+  top: 50px;
+  margin-left: -6px;
+}
+  
+.li-menu .link-menu i{
+  position: relative;
+  display: block;
+  font-size: 30px;
+  color: #FAA916;
+  padding-top: 25px;
+  width: 100%;
+  text-align: center;
+  transform: scale(0);
+}
+
+.saida .link-menu i{
+  position: relative;
+  display: block;
+  color: #FAA916;
+  width: 100%;
+  text-align: center;
+  transform: scale(0);
+}
+
+.saida{
+  list-style: none;
+  bottom: 5%;
+  position: absolute;
+}
+
+
+.link-menu{ 
+  color: aqua;
+}
+.container-menu.active .navItems-menu .link-menu i{
+  transform: scale(1);
+  transition: 0.4s ease;
+  transition-delay: calc(0.08s * var(--i));
+}
+  
+.container-menu.active .navItems-menu li:hover .link-menu i{
+  transition: 0.2s ease;
+  color: rgba(6, 74, 140, 1);
+}
+
+
+/* ========================================================== AJUSTES NOS ICONES ========================================================== */
+
+
+#icon-pessoa{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FAA916;
+} 
+
+#icon-pessoa:hover{
+  transition: 0.2s ease;
+  color: rgba(6, 74, 140, 1);
+}
+
+.saida .link-menu i{
+  font-size: 30px;
+}
+
+#icon-cad{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/*====================================================== TITULO DE INFORMAÇÃO DA TELA   =============================================================================*/
+
+
+.link-menu, .titulo-info{
+  list-style: none;
+  text-decoration: none;
+  color: inherit;
+  font-family: "Montsserat";
+  font-style: normal;
+  font-size: 11px; 
+  color: #FAA916;
+}
+
+.container-menu.active .navItems-menu .link-menu h5 {
+  transform: scale(1);
+  transition: 0.4s ease;
+  transition-delay: calc(0.08s * var(--i));
+}
+  
+.container-menu.active .navItems-menu li:hover .link-menu h5{
+  transition: 0.2s ease;
+  color: rgba(6, 74, 140, 1);
+}
+
+.container-menu.active .navItems-menu li:hover .parte-perfil h5{
+  transition: 0.2s ease;
+  color: rgba(6, 74, 140, 1);
+}
+
+
+.titulo-info{
+  font-family: "Montsserat";
+  font-style: normal;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 12px;
+}
+
+/* ======================================================= SUB MENU DE CADASTROS  ============================================================================*/
+
+.link_submenu{
+  list-style: none;
+  /* margin-top: 130px; */
+}
+
+.link_submenu .link-menu i{
+  position: relative;
+  display: block;
+  color: #FAA916;
+  width: 100%;
+  text-align: center;
+  transform: scale(0); 
+  margin-top: 50px;
+  list-style: none;
+}
+
+.sub-menu{
+  background: rgb(255, 255, 255);
+  position: absolute;
+  transition: 0.5s;
+  width: 350px;
+  align-items: center;
+  margin-left: 70px;
+  font-size: 15px;
+  top: 60%;
+  overflow: hidden;
+  display: none;
+  border-radius: 7px;
+}
+
+#fonte-submenu{
+  font-family: "Montsserat";
+  font-style: normal;
+  text-decoration: none;
+  color: #FAA916;
+}
+
+#titulo-noti{
+  margin-left: 4px;
+}
+
+.iten-submenu{
+  background-color: #fff;
+  padding: 6px;
+  font-size: 20px;
+  
+}
+
+#fonte-submenu:hover{
+  color: rgba(6, 74, 140, 1);
+}
+
+.sub-menu.active{
+  height: auto;
+  border: 2px solid #FAA916;
+  margin-left: 65px;
+}
+/* ========================================================================= SUB MENU DE PERFIS ===================================================================================*/
+
+.submenu2 {
+  background: rgb(255, 255, 255);
+  position: absolute;
+  transition: 0.5s;
+  width: 350px;
+  align-items: center;
+  margin-left: 60px;
+  font-size: 15px;
+  overflow: hidden;
+  display: none;
+  border-radius: 7px;
+  top: 30px;
+}
+
+.link-menu2, .iten-submenu2 {
+  text-decoration: none; 
+  color: inherit; 
+}
+
+.link_submenu2{  
+  list-style: none;
+}
+
+.submenu2.active {
+  height: auto;
+  border: 2px solid #FAA916;
+  margin-left: 65px;
+}
+
+.link_submenu2 .link-menu i{
+  position: relative;
+  display: block;
+  color: #FAA916;
+  width: 100%;
+  text-align: center;
+  transform: scale(0); 
+  margin-top: 70px;
+  list-style: none;
+}
+
+#fonte-submenu2{
+  font-family: "Montsserat";
+  font-style: normal;
+  text-decoration: none;
+  list-style: none;
+  color: #FAA916;
+}
+
+#fonte-submenu2:hover{
+  color: rgba(6, 74, 140, 1);
+}
+
+.iten-submenu2{
+  background-color: #fff;
+  padding: 6px;
+  font-size: 20px;
+}
+
+
+
+.link_submenu3{
+  list-style: none;
+  /* margin-top: 130px; */
+}
+
+.link_submenu3 .link-menu i{
+  position: relative;
+  display: block;
+  color: #FAA916;
+  width: 100%;
+  text-align: center;
+  transform: scale(0); 
+  margin-top: 50px;
+  list-style: none;
+}
+
+.sub-menu3{
+  background: rgb(255, 255, 255);
+  position: absolute;
+  transition: 0.5s;
+  width: 350px;
+  align-items: center;
+  margin-left: 70px;
+  font-size: 15px;
+  top: 60%;
+  overflow: hidden;
+  display: none;
+  border-radius: 7px;
+}
+
+#fonte-submenu3{
+  font-family: "Montsserat";
+  font-style: normal;
+  text-decoration: none;
+  color: #FAA916;
+}
+
+#titulo-noti{
+  margin-left: 4px;
+}
+
+.iten-submenu3{
+  background-color: #fff;
+  padding: 6px;
+  font-size: 20px;
+  
+}
+
+#fonte-submenu3:hover{
+  color: rgba(6, 74, 140, 1);
+}
+
+.sub-menu3.active{
+  height: auto;
+  border: 2px solid #FAA916;
+}
+
+.link_submenu4{
+  list-style: none;
+  /* margin-top: 130px; */
+}
+
+.link_submenu4 .link-menu i{
+  position: relative;
+  display: block;
+  color: #FAA916;
+  width: 100%;
+  text-align: center;
+  transform: scale(0); 
+  margin-top: 50px;
+  list-style: none;
+}
+
+.sub-menu4{
+  background: rgb(255, 255, 255);
+  position: absolute;
+  transition: 0.5s;
+  width: 350px;
+  align-items: center;
+  margin-left: 70px;
+  font-size: 15px;
+  top: 60%;
+  overflow: hidden;
+  display: none;
+  border-radius: 7px;
+}
+
+
+.iten-submenu4{
+  background-color: #fff;
+  padding: 6px;
+  font-size: 20px;
+  
+}
+
+
+.sub-menu4.active{
+  height: auto;
+  border: 2px solid #FAA916;
+  margin-left: 65px;
+}
+
+
+
+/* =============================================== POP UP ================================================================================ */
+.modal-container-menu{
+  display: none;
+  width: 100vw;
+  position: fixed;
+  z-index: 999;
+  justify-content: center;
+  left: 40%;
+  top: 20%;
+}
+
+
+.modal-menu{
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  width: 350px;
+  height: 250px;
+  border: 2px solid black;
+}
+
+.active{
+  display: block;
+}
+
+.btnOpenmodal-menu{
+  position: relative;
+  border: #fff;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: #fff;
+  text-align: center;
+  /* top: 140px; */
+}
+
+.modal-container-menu active{
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+
+
+/* ===================================================== BOTÕES POP'UP MENU ==================================================== */
+
+.btnOk-menu{
+  position: relative;
+  background-color: red;
+  
+}
+
+.btnClose-menu{
+  position: relative;
+  background-color: green;
+  width: 50px;
+}
+
+.btns-menu button{
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  font-style: normal;
+  font-size: 'Montserrat';
+  font-weight: 500;
+  text-align: center;
+  font-size: 15px;
+}
+
+.btns-menu{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 50%;
+  margin-left: 80px;
+  margin-top: 30%;
+}
+
+.text-popmenu{
+ position: relative;
+  display: flex;
+  margin: auto;
+  text-align: center;
+  width: 100%;
+  font-size: 22px;
+  color: black;
+  top: 20px;
+  justify-content: center;
+}
+
+
+
+/*==========================================================================Fitas==========================================================================*/
+
+.logo{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.cabecalho-menu{
+  position: relative;
+  /* margin-top: 30px; */
+  width: 100%;
+  height: 150px;
+  z-index: 999;
+}
+
+.fitas{
+    display: flex;
+    position: absolute;
+    right: 3%;
+
+}
+
+#bloc1 {
+  width: 57px;
+  height: 100px;
+  background:#FAA916 ;
+  position: relative;
+  animation-name: bloc1;
+  animation-duration: 2.5s;  
+  animation-delay: 0s;
+  animation-fill-mode: backwards;
+  box-shadow: 2px 2px 5px rgb(138, 137, 137);
+  
+}
+  
+@keyframes bloc1 {
+  from {height: 150px;top: 0px; background-color: #1c1c1c;}
+  to {height: 100px;}    
+}
+
+#bloc2 {
+  width: 57px;
+  height: 137px;
+  background: #1c1c1c;
+  position: relative;
+  animation-name: bloc2;
+  animation-duration: 2.5s;  
+  animation-delay: 0s;
+  animation-fill-mode: backwards;
+  box-shadow: 2px 2px 5px rgb(138, 137, 137);
+
+
+}
+#img-logo{
+  width: 200px;
+  height: 56px;
+  margin-top: 6px;
+}
+
+
+
+@keyframes bloc2 {
+  from {height: 90px;top: 0px; background-color:  #FAA916 ;}
+  to {height: 137px;}
+  
+}
+.darkmode-toggle{
+
+  z-index: 999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999;
+
+}
+.container-logo{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  right: 0%;
+   
+  height: 150px;
+  z-index: 2;
+}
+
+.icon-perfil{
+  width: 50px;
+  height: 50px;
+  border-radius: 60px;
+  margin: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.titulo-nome{
+  color: #FAA916;
+  font-family: "Montsserat";
+  font-style: normal;
+  font-size: 13px;
+}
+
+.parte-perfil{
+  list-style: none;
+  width: 100%; 
+  text-align: center;
+  margin-top: 17%;
+}
+
+
+
+@media (max-height:925px){
+  .navItems-menu{
+    margin-top: -40%;
+  }
+}
+
+@media (max-width: 836px){
+  .submenu2.active{
+    width: 200px;
+  }
+
+  .sub-menu.active{
+    width: 280px;
+    height: 220px;
+    margin-top: -80px;
+  }
+}
+
+@media (max-width: 832px){
+  .modal-container-menu{
+    left: 30%;
+  }
+}
+
+@media (max-height:894px){
+  .li-menu .link-menu i{
+    font-size: 20px;
+    padding-top: 17px;
+  }
+}
+
+  
+
+@media (max-height:720px){
+  .li-menu{
+    top: 15px;
+  } 
+}
+
+@media (max-height:664px){
+  .container-menu.active {
+    height: 100vh;
+    position: absolute;
+  }
+}
+
+
+
+@media (max-width:720px){
+  .sub-menu3{
+    width: 200px;
+  }
+  .sub-menu4{
+    width: 200px;
+  }
+}
+
+
+@media (max-width: 610px){
+  #bloc1{
+    width: 37px;
+    height: 70px;
+  }
+  @keyframes bloc1 {
+    from {height: 57px;top: 0px; background-color: #1c1c1c;}
+    to {height: 70px;}  
+  }
+  #bloc2{
+    width: 37px;
+    height: 90px;
+  }
+  @keyframes bloc2 {
+    from {height: 67px;top: 0px; background-color: #1c1c1c;}
+    to {height: 90px ;}   
+  }
+  #img-logo{
+    width: 130px;
+    height: 36px;
+  
+  }
+}
+
+@media (max-width: 376px){
+  #bloc1{
+    width: 35;
+    height: 60px;
+  }
+  @keyframes bloc1 {
+    from {height: 47px;top: 0px; background-color: #064A8C;}
+    to {height: 60px;}  
+  }
+  #bloc2{
+    width: 35;
+    height: 80px;
+  }
+  @keyframes bloc2 {
+    from {height: 47px;top: 0px; background-color: #064A8C;}
+    to {height: 80px ;}   
+  }
+}

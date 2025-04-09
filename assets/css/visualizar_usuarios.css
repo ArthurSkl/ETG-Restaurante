@@ -1,0 +1,374 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --cor-primaria-botao-white: white; 
+  --cor-primaria-botao-green: green;
+  --cor-primaria-botao-red:   red;
+  --cor-primaria-botao-yellow:rgba(255, 199, 0, 1);
+  --cor-primaria-botao-blue:  rgba(6, 74, 140, 1);
+}
+
+.tela_gerenciam_usuarios{
+  max-width: 832px;
+  max-height: 100vh;
+  height: 100vh;
+  overflow-y: hidden;
+  position: relative;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.pai-de-todos{
+width: 100%;
+display: flex;
+justify-content: center;
+}
+
+.formss{
+width: 100%;
+display: flex;
+flex-direction: column;
+}
+
+
+li{
+  list-style: none;
+ 
+}
+
+.container_gp{
+  width: 100%;
+  height: 65vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-height: 65vh;
+}
+
+.cardsgerenc{
+width: 94%;
+height: 54vh;
+max-width: 832px;
+background-color: rgb(255, 255, 255);
+overflow: hidden;
+overflow-y: scroll;
+border-radius: 10px;
+padding: 5px;
+}
+
+
+.cardsgerenc::-webkit-scrollbar{
+width: 8px;
+background-color: #eeeeee;
+border-radius: 10px;
+}
+
+.cardsgerenc::-webkit-scrollbar-thumb{
+background-color: #FAA916;
+border-radius: 10px; 
+} 
+
+.titulo_gp{
+
+  font-size: 23px;
+  font-weight: bold;
+  color: black; 
+}
+
+
+
+.Usuarios{
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 40px;
+font-style: normal;
+font-weight: 300;
+line-height: 140%;
+letter-spacing: 0.2px;
+margin-bottom: 40px;
+}
+
+.card_perfil{
+display: flex;
+background-color: #F9F8F8;
+width: 99%;
+min-height: 100px;
+border-radius: 18px;
+margin-bottom: 2vh;
+box-shadow: 1px 4px 4px 1px rgba(0, 0, 0, 0.25);
+padding-left: 10px;
+padding-right: 20px;
+justify-content: space-between;
+
+
+}
+.tipo_perfil{
+color: #000;
+font-size: 20px;
+font-style: normal;
+font-weight: 600;
+line-height: 140%; /* 33.6px */
+letter-spacing: 0.2px;
+margin-right: 20px;
+font-family: 'Montserrat';
+}
+
+.funcao{
+color: #000;
+font-size: 14px;
+font-style: normal;
+font-weight: 600;
+line-height: 140%; /* 19.6px */
+letter-spacing: 0.2px;
+border-radius: 13px;
+background: linear-gradient(0deg, rgba(250, 169, 22, 0.30) 0%, rgba(250, 169, 22, 0.30) 100%), #FFF;
+display: flex;
+padding: 5px;
+
+}
+.icone_perfil{
+width: 59px;
+height: 63px;
+box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+margin-right: 20px;
+}
+
+.bi.bi-pencil-square{
+font-size: 30px;
+color: black;
+cursor: pointer;
+}
+
+.icons-question1{
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+width: 82px;
+/* gap: 22.5px; */
+}
+
+/* KKKKKKKKKKKKKKKKKKKKKKKkkkkkkkkkKKKKK */
+@media screen and (max-width:660px ){
+  .icons-question1{
+    width: 95px;
+  }
+}
+@media screen and (max-width:535px ){
+  .icons-question1{
+    width: 125px;
+  }
+}
+@media screen and (max-width:450px ){
+  .icons-question1{
+    width: 160px;
+  }
+}
+@media screen and (max-width:410px ){
+  .icons-question1{
+    width: 175px;
+  }
+}
+@media screen and (max-width:370px ){
+  .icons-question1{
+    width: 190px;
+  }
+}
+@media screen and (max-width:350px ){
+  .icons-question1{
+    width: 200px;
+  }
+}
+@media screen and (max-width:330px ){
+  .icons-question1{
+    width: 260px;
+  }
+}
+
+
+.card_nome {
+width: 500px;
+margin: 10px;
+display: flex;
+align-items: center;
+flex-direction: row;
+justify-content: flex-start;
+}
+
+.bi-trash{
+  position: relative;
+font-size: 30px;
+color: rgb(255, 89, 89);
+cursor: pointer;
+}
+
+
+.container_gp2 {
+
+  display: flex;
+
+}
+.botao-padrao-cadastrar{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.botao-cadastrar-submit{
+  width: 180px;
+  height: 45px;
+  background-color: var(--cor-primaria-botao-white);
+  border: 3px solid var(--cor-primaria-botao-green);
+  border-radius: 20px;
+  cursor: pointer;
+  color: var(--cor-primaria-botao-green);
+  font-style: normal;
+  font-family: 'Montserrat';
+  font-weight: bold;
+  font-size: 15px;
+  
+}
+
+.botao-cadastrar-submit:hover{
+  transition: all 0.4s;
+  background-color: var(--cor-primaria-botao-green);
+  color: var(--cor-primaria-botao-white);
+}
+
+
+
+.botao-padrao-voltar{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.botao-voltar-submit{
+  position: relative;
+  width: 180px;
+  height: 45px;
+  background-color: transparent;
+  border: 3px solid var(--cor-primaria-botao-yellow);
+  border-radius: 20px;
+  cursor: pointer;
+  color: var(--cor-primaria-botao-yellow);
+  font-style: normal;
+  font-family: 'Montserrat';
+  font-weight: bold;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.botao-voltar-submit:hover{
+  transition: all 0.4s;
+  background-color: var(--cor-primaria-botao-yellow);
+  color: var(--cor-primaria-botao-white);
+}
+
+.alinar-botoes{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+
+/* CSS Botão Cadastrar */
+  
+.botao-cadastrar-link {
+  position: relative;
+  width: 180px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: 3px solid var(--cor-primaria-botao-green);
+  border-radius: 20px;
+  cursor: pointer;
+  color: var(--cor-primaria-botao-green);
+  font-family: 'Montserrat', sans-serif; /* Corrigir a propriedade font-family */
+  font-weight: bold;
+  font-size: 15px;
+  text-decoration: none; /* Adicionar sublinhado ao texto do link */
+}
+
+.botao-cadastrar-link:hover {
+transition: all 0.4s;
+background-color: var(--cor-primaria-botao-green);
+color: var(--cor-primaria-botao-white);
+}
+
+
+@media screen and (max-width:580px ){
+
+.botao-cadastrar-link {
+  width: 160px;
+  height: 40px;
+}
+
+.botao-voltar-submit{
+  width: 160px;
+  height: 40px;
+}
+
+.tipo_perfil {
+  font-size: 15px;
+}
+}
+
+@media screen and (max-width:430px ){
+
+.botao-cadastrar-link {
+  width: 140px;
+  height: 40px;
+}
+
+.botao-voltar-submit{
+  width: 140px;
+  height: 40px;
+}
+
+}
+
+@media screen and (max-width:380px ){
+
+.botao-padrao-cadastrar{
+  width: 100%;
+  height: 40px;
+}
+
+.botao-padrao-voltar{
+  width: 100%;
+  height: 40px;
+}
+
+}
+
+@media screen and (max-width:610px ){
+
+  .Usuarios{
+    font-size: 30px;
+  }
+
+}
+
+@media screen and (max-width:350px ){
+
+  .Usuarios{
+    font-size: 25px;
+  }
+
+}

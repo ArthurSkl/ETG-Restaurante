@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poppins, sans-serif;
+    
+}
+:root{
+    --cor-primaria-botao-white: white; 
+    --cor-primaria-botao-green: green;
+    --cor-primaria-botao-red:   red;
+    --cor-primaria-botao-yellow:rgba(255, 199, 0, 1);
+    --cor-primaria-botao-blue:  rgba(6, 74, 140, 1);
+}
+.container-pop-up-excluir{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999999999;
+    pointer-events: none;
+}
+
+.container-pop-up-excluir.active{
+    pointer-events: all;
+}
+
+.btn-pop-up-excluir{
+    padding: 10px 60px;
+    background: #6fd649;
+    color: white;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    font-size: 22px;
+    font-weight:500;
+    border-radius: 30px;
+}
+
+.btn-pop-up-excluir1{
+    padding: 10px 60px;
+    background: #6fd649;
+    color: white;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    font-size: 22px;
+    font-weight:500;
+    border-radius: 30px;
+}
+
+#popup-up-excluir{
+    background-color: white;
+}
+
+.popup-excluir{
+    width: 400px;
+    border-radius: 6px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+    text-align: center;
+    padding: 0 30px 30px;
+    color: #333;
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+}
+.open-popup{
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    background: #FFF;
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 28px;
+}
+
+.popup-excluir p{
+    font-size: 20px;
+    font-weight: 500;
+    margin: 30px 0 10px;
+
+}
+
+/* Css Botão OK */
+
+.botao-padrao-ok {
+    margin-top: 50px;
+    font-weight:500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.botao-ok-submit {
+    width: 180px;
+    height: 45px;
+    background-color: var(--cor-primaria-botao-white);
+    border: 3px solid var(--cor-primaria-botao-red);
+    border-radius: 20px;
+    cursor: pointer;
+    color: var(--cor-primaria-botao-red);
+    font-style: normal;
+    font-size: 15px;
+    font-weight: 580;
+}
+
+.botao-ok-submit:hover{
+    transition: all 0.4s;
+    background-color: var(--cor-primaria-botao-red);
+    color: var(--cor-primaria-botao-white);
+}
+
+.overlay_conf {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+}

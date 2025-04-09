@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "darkreader": "^4.9.80",
+    "jquery": "^3.7.1"
+  }
+}

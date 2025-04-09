@@ -1,0 +1,272 @@
+*{margin: 0;
+    padding: 0;
+    box-sizing: 0;
+  }
+  
+  :root{
+    --cor-primaria-botao-white: white; 
+    --cor-primaria-botao-green: green;
+    --cor-primaria-botao-yellow:rgba(255, 199, 0, 1);
+  }
+  
+ /* Css input Email */
+  
+ .input_e-mail_group.field{
+  width: 100%;
+  max-width: 84%;
+  min-width: 50%;
+} 
+
+.input_e-mail_group {
+  position: relative;
+  padding: 20px 0 0;
+  width: 100%;
+}
+
+.input_e-mail_field {
+    width: 119%;
+    border: none;
+    border-bottom: 2px solid #9b9b9b;
+    outline: 0;
+    color: black;
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+    font-family: 'Montserrat';
+    font-weight: bold;
+    font-size: 20px;
+    left: 10px;
+}
+
+.input_e-mail_field::placeholder {
+  color: transparent;
+}
+
+.input_e-mail_field:placeholder-shown ~ .input_e-mail_label {
+  font-size: 17px;
+  cursor: text;
+  top: 37px;
+  left: 10px;
+}
+
+.input_e-mail_label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.3s;
+  color: #9b9b9b;
+  pointer-events: none;
+  font-family: 'Montserrat';
+  font-weight: bold;
+  font-size: 20px;
+  left: 10px;
+}
+
+.input_e-mail_field:focus {
+  padding-bottom: 6px;
+  font-weight: 700;
+  border-width: 3px;
+  border-image-slice: 1;
+}
+
+.input_e-mail_field:focus ~ .input_e-mail_label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.3s;
+  font-size: 17px;
+  font-weight: 700;
+  left: 10px;
+}
+
+.input_e-mail_field:required, .input_e-mail_field:invalid {
+  box-shadow: none;
+}
+  
+/* Css Botão Confirmar */
+
+.botao-padrao-confirmar{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 7%; 
+}
+
+.botao-confirmar-submit{
+  width: 44%; /* 44%*/
+  height: 172%; /*170%*/
+  background-color: var(--cor-primaria-botao-white);
+  border: 3px solid var(--cor-primaria-botao-green);
+  border-radius: 20px;
+  cursor: pointer;
+  color: var(--cor-primaria-botao-green);
+  font-style: normal;
+  font-family: 'Montserrat';
+  font-weight: bold;
+  font-size: 100%;
+}
+
+.botao-confirmar-submit:hover{
+  transition: all 0.4s;
+  background-color: var(--cor-primaria-botao-green);
+  color: var(--cor-primaria-botao-white);
+}
+
+/* Css Botão Voltar */
+
+.botao-padrao-voltar{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 7%; 
+  text-decoration: none;
+}
+
+.botao-voltar-submit{
+  width: 44%; /*180px 44%*/
+  height: 150%; /*40px  150%*/
+  background-color: var(--cor-primaria-botao-white);
+  border: 3px solid var(--cor-primaria-botao-yellow);
+  border-radius: 20px;
+  cursor: pointer;
+  color: var(--cor-primaria-botao-yellow);
+  font-style: normal;
+  font-family: 'Montserrat';
+  font-weight: bold;
+  font-size: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+
+}
+
+.botao-voltar-submit:hover{
+  transition: all 0.4s;
+  background-color: var(--cor-primaria-botao-yellow);
+  color: var(--cor-primaria-botao-white);
+  text-decoration: none;
+}
+
+.centralizar_botoes_alterar_senha {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 832px;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  padding: 10px;
+  background-color: #fff; /* Optional: add a background color for better visibility */
+  margin-bottom: 15%;
+  text-decoration: none;
+}
+
+.tudo_esqueceu_senha2{
+    width: 100%;
+    height: 100%;
+    max-width: 832px;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 3%;
+}
+
+.titulo_esqueceu_senha2 h1{
+  font-family: 'Montserrat';
+  font-style: normal;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  font-size: 130%;
+  margin-top: 20%;
+}
+
+.centralizar_input_esqueceu_senha2{
+  max-width: 80%;
+  margin: 15% auto;
+  margin-top: 8%;
+}
+
+.centralizar_botoes_esqueceu_senha{
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 832px;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  padding: 10px;
+  background-color: #fff; /* Optional: add a background color for better visibility */
+  margin-bottom: 15%;
+  text-decoration: none;
+}
+
+/* @media (max-width: 882px) {
+  .centralizar_botoes_esqueceu_senha{
+    margin-top: 470px;
+  }
+
+  .centralizar_input_esqueceu_senha2{
+    margin-top: 5%;
+  }
+}
+
+.Pai-de-todos{
+  width: 100%;
+  height: 100%;
+  max-width: 832px;
+  position: relative;
+  margin: 0 auto;
+} */
+
+/* ============================================ TIMER ========================================================= */
+
+#timer{
+  /* padding-left: 80%; */
+  font-size: 135%;
+  margin-top: 0.5%;
+
+}
+
+.botao-enviar-dnv{
+  width: 150px;
+  font-size: 15px;
+  border: none;
+  background-color: white;
+  color: rgb(6, 151, 255);
+  font-family: 'Montserrat';
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.botao-enviar-dnv:hover{
+  color: #064A8C;
+}
+
+#text-timer{
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-size: 130%;
+  margin-right: 10px; 
+  min-width: 100%;
+}
+
+
+.alinhar-item-timer{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2%;
+}
+
+.item-timer{
+  display: flex;
+  /* width: 80%; */
+  align-items: center;
+}

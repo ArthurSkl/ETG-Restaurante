@@ -1,0 +1,700 @@
+/* EDITAR_USUARIOS.CSS */
+
+:root{
+  --cor-primaria-botao-white: white; 
+  --cor-primaria-botao-green: green;
+  --cor-primaria-botao-yellow:rgba(255, 199, 0, 1);
+  --cor-primaria-botao-blue:  rgba(6, 74, 140, 1);
+}
+
+*{
+    margin: 0;
+    box-sizing: 0;
+    padding: 0;
+    text-decoration: none;
+  }
+  
+  .pai-de-todos{
+    width: 94%; 
+    position: relative;
+    margin: 0 auto;
+  }
+ 
+  .titulo-perfil{
+    margin-top: 7%;
+    font-family: 'Montserrat';
+    font-weight: bold;
+  }
+  .form-minha-conta{
+    margin-top: 2%; /* 50px*/
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scrollbar-color: #FAA916;
+    max-height: 60vh; /*60vh*/
+  
+  }
+  
+  .form-minha-conta::-webkit-scrollbar{
+    width: 8px;
+    background-color: #eeeeee;
+    border-radius: 10px;
+  }
+  
+  .form-minha-conta::-webkit-scrollbar-thumb{
+  background-color: #FAA916;
+  border-radius: 10px; 
+  } 
+  .foto-perfil{
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 130px;
+    height: 130px;
+    flex-shrink: 0;
+    background-color: aqua;
+    border-radius: 15px;
+    border: 1px solid #FFF;
+    background: url(<path-to-image>), lightgray 50% / cover no-repeat;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 10000000%;
+  
+  }
+  
+  .bi-person-circle::before {
+    font-size: 100px;
+  }
+  
+  .bi-pencil-square::before {
+    font-size: 160%;
+  }
+  
+  .icon-edit{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3%;
+  }
+  
+  .titulo-perfil{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .quadrado-perfil{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .alinhar-input{
+    /* margin-top: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; */
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 15% auto;
+    margin-top: 2%;
+    width: 100%;
+  
+  } 
+  
+  .area_btn_alterar_nome{
+  
+  height: 50px;
+  width: 700px; 
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  pointer-events: none;
+  opacity: 0;
+  transition: 0.5s;
+  
+  }
+  
+  .area_btn_alterar_nome.active{
+  
+  pointer-events: auto;
+  opacity: 1;
+  
+  }
+  
+  
+  .area_btn_alterar_nome input{
+  
+  margin-right: 20px;
+  background-color: #064A8C;
+  padding: 7px 15px;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 17px;
+  font-family: 'Montserrat';
+  font-weight: bold;
+  cursor: pointer;
+  transition: .2s;
+  
+  }
+  .area_btn_alterar_nome input:hover{
+  
+  padding: 9px 15px;
+  
+  }
+  .name{
+  margin-top: 10%;
+  padding-left: 8%;
+  }
+  
+  .name-name{
+  font-family: 'Montserrat';
+  font-weight: bold;
+  margin-top: 2%;
+  }
+  
+  .alinhar-botao{
+  margin-top: 20%;
+  
+  }
+  
+  .alterar-senha{
+  margin-top: 3%;
+  font-size: 20px;
+  display: flex;
+  justify-content: start;
+  width: 83%;
+  }
+  
+  .alterar-senha a{
+  font-family: 'Montserrat';
+  font-weight: bold;
+  }
+  
+  #icon-input{
+  position: absolute;
+  top: 10px;
+  right: 3%;
+  cursor: pointer;
+  z-index: 99;
+  margin-top: 1%;
+  display: flex;
+  justify-content: end;
+  }
+  
+  #img_user{
+  
+  object-fit: cover;  
+  width: 100%;
+  height: 100%;
+  border-radius: 1000000%;
+  
+  }
+  /* 
+  @media (max-width: 832px) {
+  .name-name{
+    font-family: 'Montserrat';
+    font-weight: bold;
+    margin-top: 16%;
+    padding-left: 3%;
+  }
+  
+  .alinhar-input{
+    margin-top: 2%;
+    padding-left: 3%;
+  } 
+  
+  .alinhar-botao{
+  margin-top: 30%;
+  
+  }
+  
+  }
+  .centralizar_botoes_alterar_senha{
+  
+  margin-top: 40px;
+  }
+  .centralizar_input_alterar_senha{
+  
+  margin: 0% auto;
+  margin-bottom: 50px;
+  
+  } */
+  
+  @media(min-width: 832px){
+  #icon-input{
+    margin-top: 1%;
+  
+  }
+  
+  }
+  
+  @media(max-width: 832px){
+  
+  
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  /* BOTAO_EDITAR_USUARIOS.CSS */
+  
+  
+  /* Css input */
+  
+  .input_group.field{
+    width: 100%;
+    max-width: 84%;
+    min-width: 50%;
+  }
+  
+  .input_group {
+    position: relative;
+    padding: 2% 0 0;
+    width: 100%;
+    
+  }
+  
+  .input_field {
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #9b9b9b;
+    outline: 0;
+    color: black;
+    padding: 7px 7px;
+    background: transparent;
+    transition: border-color 0.2s;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 130%;
+    left: 10%;
+    background-color: transparent; 
+    /* border-radius: 5px;  */
+    transition: .2s;
+     
+    
+  }
+  .input_field.active {
+    
+    background-color: #eeeeee;
+  
+  }
+  
+    
+  .input_field::placeholder {
+    color: transparent;
+  }
+  
+  .input_field:placeholder-shown ~ .input_label {
+    font-size: 7%;
+    cursor: text;
+    top: 28px;
+    left: 10px;
+  }
+  
+  .input_label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.3s;
+    color: #9b9b9b;
+    pointer-events: none;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    left: 10px;
+    
+    
+  }
+  
+  .input_field:focus {
+    padding-bottom: 6px;
+    font-weight: 700;
+    border-width: 3px;
+    border-image-slice: 1;
+    
+  }
+  
+  .input_field:focus ~ .input_label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.3s;
+    font-size: 17px;
+    font-weight: 700;
+    left: 10px;
+  }
+  
+  .input_field:required, .input_field:invalid {
+    box-shadow: none;
+  }
+  
+  
+  /* Css Botão Salvar */
+  
+  .botao-padrao-salvar{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .botao-salvar-submit{
+    width: 180px;
+    height: 45px;
+    background-color: var(--cor-primaria-botao-white);
+    border: 3px solid var(--cor-primaria-botao-green);
+    border-radius: 20px;
+    cursor: pointer;
+    color: var(--cor-primaria-botao-green);
+    font-style: normal;
+    font-family: 'Montserrat';
+    font-weight: bold;
+    font-size: 15px;
+  }
+  
+  .botao-salvar-submit:hover{
+    transition: all 0.4s;
+    background-color: var(--cor-primaria-botao-green);
+    color: var(--cor-primaria-botao-white);
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  /* EDITAR_SENHA.CSS */
+  
+  
+  .pai-de-todos1{
+    max-width: 832px;
+    margin: 0 auto;
+    position: relative;
+  }
+  
+  .titulo_alterar_senha{
+    font-family: 'Montserrat';
+    font-weight: bold;
+    text-align: center;
+    display: flex;
+    padding-left: 8.4%;
+    font-size: 22px;
+    margin-top: 7%;
+  }
+  
+  .titulo_alterar_senha h1{
+  font-family: 'Montserrat';
+  font-weight: bold;
+  }
+   
+  .centralizar-back{
+  width: 100%;
+  }
+  
+  .centralizar_input_alterar_senha{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 15% auto;
+  margin-top: 4%;
+  }
+  
+  .centralizar_botoes_alterar_senha{
+      /* display: flex;
+      justify-content: space-between;
+      text-align: center;
+      margin-top: 20%; */
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      text-align: center;
+      padding: 10px; 
+      background-color: #fff; 
+    
+  
+  }
+  
+  .centralizar_botoes_alterar_senha {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 832px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding: 10px;
+    background-color: #fff; /* Optional: add a background color for better visibility */
+  }
+  
+  
+  
+  
+  
+  
+  /* INPUT_BUTTON_EDITAR_SENHA */
+  
+  
+  /* Css input Senha */
+  
+  .input_senha_group.field{
+    width: 100%;
+    max-width: 84%;/*84%*/;
+    min-width: 50%;
+    margin-top: 2%;/*15px*/
+    
+  }
+    
+  .input_senha_group.field2{
+      width: 100%;
+      max-width: 84%;
+      min-width: 50%;
+      margin-top: 2%;
+  
+  }
+   
+  .input_senha_group.field3{
+    width: 100%;
+    max-width: 84%;
+    min-width: 50%;
+    margin-top: 2%;
+  
+  }
+  
+  .input_senha_group {
+    position: relative;
+    padding: 20px 0 0;
+    width: 100%;
+  }
+  
+  .input_senha_field {
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #9b9b9b;
+    outline: 0;
+    color: black;
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    left: 10px;
+  }
+  
+  .input_senha_field::placeholder {
+    color: transparent;
+  }
+  
+  .input_senha_field:placeholder-shown ~ .input_senha_label {
+    font-size: 17px;
+    cursor: text;
+    top: 37px;
+    left: 10px;
+  }
+  
+  .input_senha_label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    color: #9b9b9b;
+    pointer-events: none; 
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    left: 10px;
+  }
+  
+  .input_senha_field:focus {
+    padding-bottom: 6px;
+    font-weight: 700;
+    border-width: 3px;
+    border-image-slice: 1;
+  }
+  
+  .input_senha_field:focus ~ .input_senha_label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 17px;
+    font-weight: 700;
+    left: 10px;
+  }
+    
+  .input_senha_field:required, .input_senha_field:invalid {
+    box-shadow: none;
+  }
+  
+  /* Css input Email */
+  
+  .input_e-mail_group.field{
+    width: 100%;
+    max-width: 700px;
+    min-width: 300px;
+  }
+  
+  .input_e-mail_group {
+    position: relative;
+    padding: 20px 0 0;
+    width: 100%;
+  }
+  
+  .input_e-mail_field {
+      width: 100%;
+      border: none;
+      border-bottom: 2px solid #9b9b9b;
+      outline: 0;
+      color: black;
+      padding: 7px 0;
+      background: transparent;
+      transition: border-color 0.2s;
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      left: 10px;
+  }
+  
+  .input_e-mail_field::placeholder {
+    color: transparent;
+  }
+  
+  .input_e-mail_field:placeholder-shown ~ .input_e-mail_label {
+    font-size: 17px;
+    cursor: text;
+    top: 37px;
+    left: 10px;
+  }
+  
+  .input_e-mail_label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.3s;
+    color: #9b9b9b;
+    pointer-events: none;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    left: 10px;
+  }
+  
+  .input_e-mail_field:focus {
+    padding-bottom: 6px;
+    font-weight: 700;
+    border-width: 3px;
+    border-image-slice: 1;
+  }
+  
+  .input_e-mail_field:focus ~ .input_e-mail_label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.3s;
+    font-size: 17px;
+    font-weight: 700;
+    left: 10px;
+  }
+  
+  .input_e-mail_field:required, .input_e-mail_field:invalid {
+    box-shadow: none;
+  }
+  
+  /* Css Botão Confirmar */
+  
+  .botao-padrao-confirmar{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 7%; 
+  }
+  
+  .botao-confirmar-submit{
+    width: 44%; /* 44%*/
+    height: 172%; /*170%*/
+    background-color: var(--cor-primaria-botao-white);
+    border: 3px solid var(--cor-primaria-botao-green);
+    border-radius: 20px;
+    cursor: pointer;
+    color: var(--cor-primaria-botao-green);
+    font-style: normal;
+    font-family: 'Montserrat';
+    font-weight: bold;
+    font-size: 15px;
+  }
+  
+  .botao-confirmar-submit:hover{
+    transition: all 0.4s;
+    background-color: var(--cor-primaria-botao-green);
+    color: var(--cor-primaria-botao-white);
+  }
+  
+  /* Css Botão Voltar */
+  
+  .botao-padrao-voltar{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 7%; 
+  }
+  
+  .botao-voltar-submit{
+    width: 44%; /*180px 44%*/
+    height: 150%; /*40px  150%*/
+    background-color: var(--cor-primaria-botao-white);
+    border: 3px solid var(--cor-primaria-botao-yellow);
+    border-radius: 20px;
+    cursor: pointer;
+    color: var(--cor-primaria-botao-yellow);
+    font-style: normal;
+    font-family: 'Montserrat';
+    font-weight: bold;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+  }
+  
+  .botao-voltar-submit:hover{
+    transition: all 0.4s;
+    background-color: var(--cor-primaria-botao-yellow);
+    color: var(--cor-primaria-botao-white);
+  }
+  

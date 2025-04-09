@@ -1,0 +1,299 @@
+/* GERAL */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat";
+}
+
+:root{
+    --cor-primaria-botao-white: white; 
+    --cor-primaria-botao-green: green;
+    --cor-primaria-botao-red:   red;
+    --cor-primaria-botao-yellow:rgba(255, 199, 0, 1);
+    --cor-primaria-botao-blue:  rgba(6, 74, 140, 1);
+    --move_low: 75px;
+    --move_low_reverse: -75px;
+}
+
+.visualizar_sala{
+    
+    max-width: 832px;
+    position: relative;
+    margin: 0 auto;
+}
+
+
+
+
+
+/* TITULO DA PÁGINA */
+h1.nome-sala{
+    margin-top: 1vh;
+    font-style: normal;
+    font-family: 'Montserrat';
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+
+
+/* MEIO DA PÁGINA */
+.area_card{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    width: 100%;
+}
+
+
+
+
+
+
+/* CARD DE VISUALIZAR SALAS */
+.card{
+    position: relative;
+    display: flex;
+    width: 80%;
+    border-radius: 10px;
+    background-color: white;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1vh;
+    height: 60vh;
+}
+
+.imagem_card{
+    display: flex;
+    width: 100%;
+    height: 20vh;
+    border: solid black 0px;
+}
+/* 
+#imagemExpandida{
+    position: absolute;
+    visibility: hidden;
+    object-fit: cover;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#overlay_imagem{
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1059;
+    visibility: hidden;
+}
+
+#imagemExpandida img{
+    border-radius: 25px;
+    cursor: pointer;
+} */
+
+.img_config{
+    display: flex;
+    width: 100%;
+    height: 99%;
+    object-fit: cover;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.texto_card{
+    width: 90%;
+}
+
+.nome_da_sala{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    font-weight: 500;
+}
+
+#paragrafo_descricao{
+
+    display: flex;
+    font-family: 'Montserrat';
+    font-size: 22px;
+    width: 100%;
+    margin-top: 2vh;
+}
+
+.texto-descricao{
+    display: flex;
+    width: 100%;
+    margin-top: 1vh;
+    text-align: justify;
+    font-style: normal;
+    font-family: 'Montserrat';
+    font-size: 16px;
+    word-break: break-all;
+    word-wrap: break-word;
+
+}
+
+h2#dias-funcionamento{
+    display: flex;
+    font-family: 'Montserrat';
+    font-size: 22px;
+    width: 100%;
+    margin-top: 3vh;
+}
+
+.dias_funcionamento{
+    display: flex;
+    width: 100%;
+    margin-top: 1vh;
+    text-align: justify;
+    font-style: normal;
+    font-family: 'Montserrat';
+    font-size: 16px;
+    word-spacing: 1vw;
+}
+
+h2#turnos-funcionamento{
+    display: flex;
+    font-family: 'Montserrat';
+    font-size: 22px;
+    width: 100%;
+    margin-top: 3vh;
+}
+
+
+.turnos_funcionamento{
+    display: flex;
+    width: 100%;
+    margin-top: 1vh;
+    text-align: justify;
+    font-style: normal;
+    font-family: 'Montserrat';
+    font-size: 16px; 
+    word-spacing: 1vw;
+    margin-bottom: 3vh;
+}
+
+
+
+
+
+/* PARTE INFERIOR DA TELA - BOTÕES */
+.alinhar_botoes{
+    position: relative;
+    display: flex; 
+    margin-top: 3vh;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+/* CSS Botão Voltar */
+.botao-voltar-submit{
+    width: 180px;
+    height: 45px;
+    background-color: transparent;
+    border: 3px solid var(--cor-primaria-botao-yellow);
+    border-radius: 20px;
+    cursor: pointer;
+    color: var(--cor-primaria-botao-yellow);
+    font-style: normal;
+    font-family: 'Montserrat';
+    font-weight: bold;
+    font-size: 15px;
+    text-align: center;
+}
+
+.botao-voltar-submit:hover{
+    transition: all 0.4s;
+    background-color: var(--cor-primaria-botao-yellow);
+    color: var(--cor-primaria-botao-white);
+}
+
+/* Css Botão Fazer Checklist */
+.botao-fazer-checklist-submit{
+    width: 180px;
+    height: 45px;
+    background-color: transparent;
+    border: 3px solid var(--cor-primaria-botao-green);
+    border-radius: 20px;
+    cursor: pointer;
+    color: var(--cor-primaria-botao-green);
+    font-style: normal;
+    font-family: 'Montserrat';
+    font-weight: bold;
+    font-size: 15px;
+    text-align: center;   
+}
+
+.botao-fazer-checklist-submit:hover{
+    transition: all 0.4s;
+    background-color: var(--cor-primaria-botao-green);
+    color: var(--cor-primaria-botao-white);
+}
+
+
+
+
+/* PARTE DA RESPONSIVIDADE DA TELA */
+@media screen and (max-width:590px ){
+
+    .card{
+        height: 55vh;
+    }
+
+    h1.nome-sala{
+        font-size: 20px;
+    }
+
+    #paragrafo_descricao{
+        font-size: 15px;
+        margin-top: 1vh;
+    }
+
+    .texto-descricao{
+        font-size: 13px;
+        word-spacing: 1px;
+    }
+
+    h2#dias-funcionamento{
+        font-size: 15px;
+        margin-top: 1vh;
+    }
+
+    .dias_funcionamento{
+        font-size: 13px;
+        word-spacing: 2px;
+    }
+
+    h2#turnos-funcionamento{
+        font-size: 15px;
+        margin-top: 1vh;
+    }
+
+    .turnos_funcionamento{
+        font-size: 13px;
+        word-spacing: 2px;
+    }
+
+    .botao-fazer-checklist-submit{
+        width: 115px;
+        font-size: 11px;
+    }
+
+    .botao-voltar-submit{
+        width: 115px;
+        font-size: 13px;
+    }
+
+}

@@ -1,0 +1,266 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat";
+  text-decoration: none;
+}
+
+:root{
+  --cor-primaria-botao-white: white; 
+  --cor-primaria-botao-green: green;
+  --cor-primaria-botao-red:   red;
+  --cor-primaria-botao-yellow:rgba(255, 199, 0, 1);
+  --cor-primaria-botao-blue:  rgba(6, 74, 140, 1);
+  ;
+}
+
+
+.body-listar-relatorio{
+  max-width: 832px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.main_listar_relatorio{
+  margin-top: 2%; 
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scrollbar-color: #FAA916;
+  max-height: 60vh; 
+} 
+
+.main_listar_relatorio::-webkit-scrollbar{
+  width: 8px;
+  background-color: #eeeeee;
+  border-radius: 10px;
+}
+  
+  .main_listar_relatorio::-webkit-scrollbar-thumb{
+  background-color: #FAA916;
+  border-radius: 10px; 
+  } 
+
+.titulos{
+  display: flex;
+  justify-content: space-evenly;    
+}
+
+.img-td{
+  width: 80px;
+  height: 70px;
+  border-radius: 15px;
+}
+
+.div-td{
+  display: flex;
+  width: 90%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.titulos{
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  padding-left: 6%; 
+  margin-top: 5%;
+}
+
+.section_titulo{
+  font-family: "Montserrat";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bi-circle-fill::before {
+  content: "\f287";
+  color: red;
+  margin-top: 3%;
+}
+
+.p-status{
+  margin-top: 3%;
+} 
+
+.section_table {
+  background-color: white; 
+}
+
+.table th {
+  background-color: #f2f2f2; 
+  color: black; 
+}
+
+.progress-bar {
+  width: 100%;
+  height: 20px;
+  background-color: #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 5%;
+}
+
+.progress {
+  width: 25%; 
+  height: 100%;
+  background-color: red; 
+  transition: width 0.5s ease-in-out;
+}
+
+.progress-bar-alerta{
+  width: 100%;
+  height: 20px;
+  background-color: #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 5%;
+}
+
+.progress-alerta{
+  width: 75%; 
+  height: 100%;
+  background-color: #064A8C; 
+  transition: width 0.5s ease-in-out;
+}
+
+.p-progress{
+  font-size: 90%;
+  margin-top: 3%;
+  font-weight: bold;
+}
+
+.p-docente{
+  margin-top: 20%;
+  font-weight: bold;
+  font-size: 86%;
+}
+
+.p-status-alerta{
+  font-size: 90%;
+}
+
+.bi-circle-fill-yellow::before {
+  content: "\f287";
+  color: #064A8C;
+  margin-top: 3%;
+}
+
+.bi-circle-fill-green::before {
+  content: "\f287";
+  color: #609437;
+  margin-top: 3%;
+}
+
+.p-status-dia{
+  margin-top: 3%;
+  font-size: 90%;
+}
+
+.progress-bar-dia{
+  width: 100%;
+  height: 20px;
+  background-color: #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 5%;
+}
+
+.progress-dia{
+  width: 100%; 
+  height: 100%;
+  background-color: #609437; 
+  transition: width 0.5s ease-in-out;
+}
+
+.container_tabela{
+  margin-top: 5%;
+}
+
+.tabela_nc{
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.body-tabela{
+  position: relative;
+}
+.body-tabela, th, td {
+   
+  font-size: 15px;
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+
+.titulo-tela{
+  font-size: 180%;
+}
+
+.buttons{
+  margin-top: 10%;
+}
+
+.botao-padrao-voltar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.botao-voltar-link {
+  /* width: 110px; */
+  position: relative;
+  display: inline-block;
+  padding: 12px 60px;
+  background-color: transparent;
+  border: 3px solid var(--cor-primaria-botao-yellow);
+  border-radius: 20px;
+  cursor: pointer;
+  color: var(--cor-primaria-botao-yellow);
+  font-family: 'Montserrat', sans-serif; /* Corrigir a propriedade font-family */
+  font-weight: bold;
+  font-size: 15px;
+  text-decoration: none; /* Adicionar sublinhado ao texto do link */
+}
+
+.botao-voltar-link:hover {
+  transition: all 0.4s;
+  background-color: var(--cor-primaria-botao-yellow);
+  color: var(--cor-primaria-botao-white);
+} -->
+
+.buttons-up{
+  margin-top: 5%;
+}
+
+.buttons-upp{
+  border-radius: 20px;
+  width: 20%;
+  height: 40px;
+  background-color: rgb(87, 83, 83);
+  color: white;
+  font-weight: bold;
+  font-family: "Montserrat";
+  border: 2px solid rgb(87, 83, 83) ; 
+  text-decoration: none;
+}
+
+
+.buttons-upp:hover{
+  background-color: rgb(151, 149, 149);
+  border: 2px solid rgb(87, 83, 83) ;
+}
+
+a{
+  color: white;
+}
+
+@media screen and (max-width: 600px) {
+  .body-tabel, th, td {
+    padding: 4px;
+  }
+}

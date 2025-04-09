@@ -1,0 +1,324 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  .titulo_filtros {
+    font-family: 'Montserrat';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 45px;
+    margin-bottom: 2%;
+  }
+
+  
+  .paidetodos{
+    width: 100%; 
+    max-width: 832px;
+    position: relative;
+    margin: 0 auto;
+  }
+  
+  .report_principal {
+    display: flex;
+    flex-direction: column;
+    width: 94%; 
+    position: relative;
+    margin: 0 auto;
+    
+  }
+  
+  .teste {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    height: 100%;
+    flex-direction: row;
+    
+  }
+  
+  .testePrimeiraSecao {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 16px;
+   
+
+  }
+
+  .testeSegundaSecao{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    height: 100%;
+    bottom: 3%;
+    margin-right: 5%;
+  }
+
+  .form-group{
+    display: flex;
+  }
+  .link {
+    cursor: pointer;
+    display: block;
+    width: 250px;
+    height: 47px;
+    padding: 15px 15px 15px 26px;
+    color: #4D4D4D;
+    background-color: white;
+    font-size: 14px;
+    font-weight: 700px;
+    border-radius: 5px;
+    border-bottom: 1px solid #CCC;
+    -webkit-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    
+  }
+
+  .link option {
+    position: absolute;
+    top: 16px;
+    left: 12px;
+    font-size: 18px;
+    color: #595959;
+    -webkit-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+  
+  }
+
+  .check_relatorio {
+    margin-top: 10px;
+    cursor: pointer;
+    display: block;
+    width: 250px;
+    height: 47px;
+    padding: 15px 15px 15px 26px;
+    color: #4D4D4D;
+    background-color: white;
+    font-size: 14px;
+    font-weight: 700px;
+    border-radius: 5px;
+    border-bottom: 1px solid #CCC;
+    -webkit-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    
+  }
+
+  .check_relatorio option {
+    position: absolute;
+    top: 16px;
+    left: 12px;
+    font-size: 18px;
+    color: #595959;
+    -webkit-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+  
+  }
+ 
+  .input-container {
+    display: flex;
+    width: fit-content;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+  }
+  .input-container2{
+    margin-top: 10px;
+  }
+  
+  .data_inicial {
+    display: flex;
+    padding: 20px;
+    width: 240px;
+    height: 48px;
+    flex-shrink: 0;
+    border-radius: 5px;
+    gap: 20%;
+    background-color: white;
+  }
+  
+  .data_final {
+    display: flex;
+    padding: 20px;
+    width: 240px;
+    height: 48px;
+    flex-shrink: 0;
+    border-radius: 5px;
+    gap: 20%;
+    background-color: white;
+  
+  }
+
+  .container_graficos{
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 30px;
+    text-align: center;
+  }
+  
+  .grafico_conf {
+    margin-top: 10px;
+    width: 50%;
+    margin-bottom: -28%;
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: end;
+    
+   
+   
+  }
+  .grafico_qtd{
+    width: 50%;
+    margin-left: 49%;
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: end;
+
+  }
+  
+  canvas {
+    max-width: 100%; 
+    height: auto;
+  }
+  
+  .card_grafic{
+    max-width: 100%;
+    margin-top: 10px;
+    width: 750px;
+    height: 520px;
+    flex-shrink: 0;
+    border-radius: 15px;
+    background: rgba(217, 217, 217, 0.20);
+  
+  }
+
+  
+  
+  @media (max-width: 768px) {
+    .card_grafic {
+      width: 100%; 
+     }
+  } 
+
+  
+
+  @media (max-width: 390px) {
+
+    .grafico_conf {
+      margin-top: 10px;
+      width: 100%;
+      margin-bottom: -28%;
+      flex: 1;
+      display: flex;
+      justify-content: flex-end;
+      align-items: end;
+      
+
+    }
+    .grafico_qtd{
+      display: flex;
+      justify-content: flex-end;
+      align-items: end;
+      margin-top: 40%;
+      width: 100%;
+  
+    }
+    
+    canvas {
+      max-width: 100%; 
+      height: auto;
+    }
+
+    
+  
+    .card_grafic {
+      margin-top: 10px;
+      max-width: 100%; 
+      height: auto; 
+      border-radius: 15px;
+      background: rgba(217, 217, 217, 0.20);
+      box-sizing: border-box; 
+    }
+
+  }
+
+
+  .area-botao {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 10%;
+
+  }
+
+.btn-relatorio,
+.btn-detalhes {
+    cursor: pointer;
+    width: 150px;
+    height: 50px;
+    border: 3px solid #609437;
+    background: #609437;
+    color: #f3f3f3;
+    border-radius: 25px;
+    margin-right: 10px; /* Espaçamento entre os botões */
+}
+
+.btn-relatorio,
+.btn-detalhes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+  .filter-relatorio{
+    display: flex;
+    align-items: end;
+    justify-content: end;
+  }
+  .btn-filter {
+    display: flex;
+    justify-content: flex-end; /* Alinha os botões à direita */
+    margin-top: 20px;
+    gap: 1%;
+}
+
+.limpar-filtros {
+    width: 127px;
+    height: 41px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    border: 1px solid #000;
+    background: #FFF;
+    color: #1270B0;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%;
+    cursor: pointer; 
+}
+
+.filtros {
+    width: 127px;
+    height: 41px;
+    color: #FFF;
+    background-color: #064A8C;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    cursor: pointer;
+}

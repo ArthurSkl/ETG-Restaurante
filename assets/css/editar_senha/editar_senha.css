@@ -1,0 +1,88 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+
+
+.pai-de-todos1{
+  max-width: 832px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.titulo_alterar_senha{
+  font-family: 'Montserrat';
+  font-weight: bold;
+  text-align: center;
+  display: flex;
+  padding-left: 8.4%;
+  font-size: 22px;
+  margin-top: 7%;
+}
+
+.titulo_alterar_senha h1{
+font-family: 'Montserrat';
+font-weight: bold;
+font-size: 24px;
+}
+ 
+.centralizar-back{
+width: 100%;
+}
+
+.centralizar_input_alterar_senha{
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+margin: 15% auto;
+margin-top: 4%;
+}
+
+.centralizar_botoes_alterar_senha{
+    /* display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin-top: 20%; */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding: 10px; 
+   
+
+}
+
+.centralizar_botoes_alterar_senha {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 832px;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  padding: 10px;
+ }
+
+
+
+
+
+
+/* @media (max-width: 832px) {
+.centralizar_botoes_alterar_senha{
+  margin-top: 300px;
+}
+
+.centralizar_input_alterar_senha{
+  margin-top: 5%;
+}
+} */
+
+

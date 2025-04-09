@@ -1,0 +1,646 @@
+*{margin: 0;
+  padding: 0;
+  box-sizing: 0;}
+  
+:root{
+    --cor-primaria-botao-white: white; 
+    --cor-primaria-botao-green: green;
+    --cor-primaria-botao-red:   red;
+    --cor-primaria-botao-yellow:rgba(255, 199, 0, 1);
+    --cor-primaria-botao-blue:  rgba(6, 74, 140, 1);
+    ;
+}
+
+/* Css Botão OK */
+
+.botao-padrao-ok {
+    width: 100%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.botao-ok-submit {
+    width: 180px;
+    height: 45px;
+    background-color: var(--cor-primaria-botao-white);
+    border: 3px solid var(--cor-primaria-botao-green);
+    border-radius: 20px;
+    cursor: pointer;
+    color: var(--cor-primaria-botao-green);
+    font-style: normal;
+    font-size: 15px;
+    font-weight: 580;
+}
+
+.botao-ok-submit:hover{
+    transition: all 0.4s;
+    background-color: var(--cor-primaria-botao-green);
+    color: var(--cor-primaria-botao-white);
+}
+
+/* Css Botão Fazer Checklist */
+ 
+.botao-padrao-fazer-checklist{
+    width: 100%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.botao-fazer-checklist-submit{
+    width: 180px;
+    height: 45px;
+    background-color: var(--cor-primaria-botao-white);
+    border: 3px solid var(--cor-primaria-botao-green);
+    border-radius: 20px;
+    cursor: pointer;
+    color: var(--cor-primaria-botao-green);
+    font-style: normal;
+    font-size: 'Montserrat';
+    font-weight: 580;
+    font-size: 15px;
+    
+    
+}
+
+.botao-fazer-checklist-submit:hover{
+    transition: all 0.4s;
+    background-color: var(--cor-primaria-botao-green);
+    color: var(--cor-primaria-botao-white);
+}
+
+/* Css Botão Confirmar */
+
+.botao-padrao-confirmar{
+    width: 100%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.botao-confirmar-submit{
+    width: 180px;
+    height: 45px;
+    background-color: var(--cor-primaria-botao-white);
+    border: 3px solid var(--cor-primaria-botao-green);
+    border-radius: 20px;
+    cursor: pointer;
+    color: var(--cor-primaria-botao-green);
+    font-style: normal;
+    font-size: 'Montserrat';
+    font-weight: 580;
+    font-size: 15px;
+}
+
+.botao-confirmar-submit:hover{
+    transition: all 0.4s;
+    background-color: var(--cor-primaria-botao-green);
+    color: var(--cor-primaria-botao-white);
+}
+
+/* Css Botão IR PARA MURAL DE AVISOS */
+
+.botao-padrao-mural-aviso{
+    width: 100%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.botao-mural-aviso-submit{
+    width: 180px;
+    height: 45px;
+    background-color: var(--cor-primaria-botao-white);
+    border: 3px solid var(--cor-primaria-botao-green);
+    border-radius: 20px;
+    cursor: pointer;
+    color: var(--cor-primaria-botao-green);
+    font-style: normal;
+    font-size: 'Montserrat';
+    font-weight: 580;
+    font-size: 15px;
+
+}
+
+.botao-mural-aviso-submit:hover{
+    transition: all 0.4s;
+    background-color: var(--cor-primaria-botao-green);
+    color: var(--cor-primaria-botao-white);
+}
+
+/* Css Botão Validar Checklist */
+
+.botao-padrao-validar-checklist{
+    width: 100%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.botao-validar-checklist-submit{
+    width: 180px;
+    height: 45px;
+    background-color: var(--cor-primaria-botao-white);
+    border: 3px solid var(--cor-primaria-botao-green);
+    border-radius: 20px;
+    cursor: pointer;
+    color: var(--cor-primaria-botao-green);
+    font-style: normal;
+    font-size: 'Montserrat';
+    font-weight: 580;
+    font-size: 15px;
+
+}
+
+.botao-validar-checklist-submit:hover{
+    transition: all 0.4s;
+    background-color: var(--cor-primaria-botao-green);
+    color: var(--cor-primaria-botao-white);
+}
+
+/* Css Botão Cancelar */
+
+.botao-padrao-cancelar{
+    width: 100%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.botao-cancelar-submit{
+    width: 180px;
+    height: 45px;
+    background-color: var(--cor-primaria-botao-white);
+    border: 3px solid var(--cor-primaria-botao-red);
+    border-radius: 20px;
+    cursor: pointer;
+    color: var(--cor-primaria-botao-red);
+    font-style: normal;
+    font-size: 'Montserrat';
+    font-weight: 580;
+    font-size: 15px;
+
+}
+
+.botao-cancelar-submit:hover{
+    transition: all 0.4s;
+    background-color: var(--cor-primaria-botao-red);
+    color: var(--cor-primaria-botao-white);
+}
+
+/* Css Botão Excluir */
+
+.botao-padrao-excluir{
+    width: 100%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.botao-excluir-submit{
+    width: 180px;
+    height: 45px;
+    background-color: var(--cor-primaria-botao-white);
+    border: 3px solid var(--cor-primaria-botao-red);
+    border-radius: 20px;
+    cursor: pointer;
+    color: var(--cor-primaria-botao-red);
+    font-style: normal;
+    font-size: 'Montserrat';
+    font-weight: 580;
+    font-size: 15px;
+
+}
+
+.botao-excluir-submit:hover{
+    transition: all 0.4s;
+    background-color: var(--cor-primaria-botao-red);
+    color: var(--cor-primaria-botao-white);
+}
+
+/* Css Botão Voltar */
+
+.botao-padrao-voltar{
+    /* width: 100%; */
+    
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+.botao-voltar-submit{
+    width: 180px;
+    height: 45px;
+    background-color: var(--cor-primaria-botao-white);
+    border: 3px solid var(--cor-primaria-botao-yellow);
+    border-radius: 20px;
+    cursor: pointer;
+    color: var(--cor-primaria-botao-yellow);
+    font-style: normal;
+    font-size: 'Montserrat';
+    font-weight: 580;
+    font-size: 15px;
+
+}
+
+.botao-voltar-submit:hover{
+    transition: all 0.4s;
+    background-color: var(--cor-primaria-botao-yellow);
+    color: var(--cor-primaria-botao-white);
+}
+
+/* Css Botão Inicio */
+
+.botao-padrao-inicio{
+    width: 100%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.botao-inicio-submit{
+    width: 180px;
+    height: 45px;
+    background-color: var(--cor-primaria-botao-white);
+    border: 3px solid var(--cor-primaria-botao-green);
+    border-radius: 20px;
+    cursor: pointer;
+    color: var(--cor-primaria-botao-green);
+    font-style: normal;
+    font-size: 'Montserrat';
+    font-weight: 580;
+    font-size: 15px;
+
+
+}
+
+.botao-inicio-submit:hover{
+    transition: all 0.4s;
+    background-color: var(--cor-primaria-botao-green);
+    color: var(--cor-primaria-botao-white);
+}
+
+/* Css Botão Sim */
+
+.botao-padrao-sim{
+    width: 100%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.botao-sim-submit{
+    width: 140px;
+    height: 54px;
+    background-color: var(--cor-primaria-botao-green);
+    border: 3px solid var(--cor-primaria-botao-white);
+    border-radius: 20px;
+    cursor: pointer;
+    color: var(--cor-primaria-botao-white);
+    font-style: normal;
+    font-size: 'Montserrat';
+    font-weight: 580;
+    font-size: 15px;
+}
+
+/* Css Botão Não */
+
+.botao-padrao-nao{
+    width: 100%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.botao-nao-submit{
+    width: 140px;
+    height: 54px;
+    background-color: var(--cor-primaria-botao-red);
+    border: 3px solid var(--cor-primaria-botao-white);
+    border-radius: 20px;
+    cursor: pointer;
+    color: var(--cor-primaria-botao-white);
+    font-style: normal;
+    font-size: 'Montserrat';
+    font-weight: 580;
+    font-size: 15px;
+}
+
+/* Css Botão Entrar */
+
+.botao-padrao-entrar{
+    width: 100%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.botao-entrar-submit{
+    width: 246px;
+    height: 43px;
+    background-color: var(--cor-primaria-botao-blue);
+    border: 3px solid var(--cor-primaria-botao-white);
+    border-radius: 9px;
+    cursor: pointer;
+    color: var(--cor-primaria-botao-white);
+    font-style: normal;
+    font-size: 'Montserrat';
+    font-weight: 580;
+    font-size: 15px;
+}
+
+/* Css Botão Notificação */
+
+.botao-padrao-notificacao{
+    width: 100%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.botao-notificacao-submit{
+    width: 180px;
+    height: 45px;
+    background-color: var(--cor-primaria-botao-white);
+    border: 3px solid var(--cor-primaria-botao-green);
+    border-radius: 20px;
+    cursor: pointer;
+    color: var(--cor-primaria-botao-green);
+    font-style: normal;
+    font-size: 'Montserrat';
+    font-weight: 580;
+    font-size: 15px;
+}
+
+.botao-notificacao-submit:hover{
+    transition: all 0.4s;
+    background-color: var(--cor-primaria-botao-green);
+    color: var(--cor-primaria-botao-white);
+}
+
+/* Css Botão Enviar */
+
+.botao-padrao-enviar{
+    width: 100%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.botao-enviar-submit{
+    width: 180px;
+    height: 45px;
+    background-color: var(--cor-primaria-botao-white);
+    border: 3px solid var(--cor-primaria-botao-green);
+    border-radius: 20px;
+    cursor: pointer;
+    color: var(--cor-primaria-botao-green);
+    font-style: normal;
+    font-size: 'Montserrat';
+    font-weight: 580;
+    font-size: 15px;
+}
+
+.botao-enviar-submit:hover{
+    transition: all 0.4s;
+    background-color: var(--cor-primaria-botao-green);
+    color: var(--cor-primaria-botao-white);
+}
+
+/* Css Botão Finalizar */
+
+.botao-padrao-finalizar{
+    width: 100%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.botao-finalizar-submit{
+    width: 180px;
+    height: 45px;
+    background-color: var(--cor-primaria-botao-white);
+    border: 3px solid var(--cor-primaria-botao-green);
+    border-radius: 20px;
+    cursor: pointer;
+    color: var(--cor-primaria-botao-green);
+    font-style: normal;
+    font-size: 'Montserrat';
+    font-weight: 580;
+    font-size: 15px;
+}
+
+.botao-finalizar-submit:hover{
+    transition: all 0.4s;
+    background-color: var(--cor-primaria-botao-green);
+    color: var(--cor-primaria-botao-white);
+}
+
+/* Css Botão Salvar */
+
+.botao-padrao-salvar{
+    width: 100%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.botao-salvar-submit{
+    width: 180px;
+    height: 45px;
+    background-color: var(--cor-primaria-botao-white);
+    border: 3px solid var(--cor-primaria-botao-green);
+    border-radius: 20px;
+    cursor: pointer;
+    color: var(--cor-primaria-botao-green);
+    font-style: normal;
+    font-size: 'Montserrat';
+    font-weight: 580;
+    font-size: 15px;
+}
+
+.botao-salvar-submit:hover{
+    transition: all 0.4s;
+    background-color: var(--cor-primaria-botao-green);
+    color: var(--cor-primaria-botao-white);
+}
+
+/* Css Botão Relatorio */
+
+.botao-padrao-relatorio{
+    width: 100%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.botao-relatorio-submit{
+    width: 255px;
+    height: 52px;
+    background-color: var(--cor-primaria-botao-green);
+    border: 3px solid var(--cor-primaria-botao-white);
+    border-radius: 20px;
+    cursor: pointer;
+    color: var(--cor-primaria-botao-white);
+    font-style: normal;
+    font-size: 'Montserrat';
+    font-weight: 580;
+    font-size: 15px;
+}
+
+/* Css Botão Imprimir */
+
+.botao-padrao-imprimir{
+    width: 100%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.botao-imprimir-submit{
+    width: 180px;
+    height: 45px;
+    background-color: var(--cor-primaria-botao-white);
+    border: 3px solid var(--cor-primaria-botao-green);
+    border-radius: 20px;
+    cursor: pointer;
+    color: var(--cor-primaria-botao-green);
+    font-style: normal;
+    font-size: 'Montserrat';
+    font-weight: 580;
+    font-size: 15px;
+}
+
+.botao-imprimir-submit:hover{
+    transition: all 0.4s;
+    background-color: var(--cor-primaria-botao-green);
+    color: var(--cor-primaria-botao-white);
+}
+
+/* Css Botão Cadastrar */
+
+.botao-padrao-cadastrar{
+    /* width: 100%; */
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+.botao-cadastrar-submit{
+    width: 180px;
+    height: 45px;
+    background-color: transparent;
+    border: 3px solid var(--cor-primaria-botao-green);
+    border-radius: 20px;
+    cursor: pointer;
+    color: var(--cor-primaria-botao-green);
+    font-style: normal;
+    font-size: 'Montserrat';
+    font-weight: 580;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.botao-cadastrar-submit:hover{
+    transition: all 0.4s;
+    background-color: var(--cor-primaria-botao-green);
+    color: var(--cor-primaria-botao-white);
+}
+
+/* Css Botão Novo Perfil */
+
+.botao-padrao-novo-perfil{
+    width: 100%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.botao-novo-perfil-submit{
+    width: 180px;
+    height: 45px;
+    background-color: var(--cor-primaria-botao-white);
+    border: 3px solid var(--cor-primaria-botao-green);
+    border-radius: 20px;
+    cursor: pointer;
+    color: var(--cor-primaria-botao-green);
+    font-style: normal;
+    font-size: 'Montserrat';
+    font-weight: 580;
+    font-size: 15px;
+}
+
+.botao-novo-perfil-submit:hover{
+    transition: all 0.4s;
+    background-color: var(--cor-primaria-botao-green);
+    color: var(--cor-primaria-botao-white);
+}
+
+/* Css Botão Ativar e Desativar */
+
+.switch{
+    padding-left: 480px;
+}
+
+.slider {
+    background-color: #fd0404f8;
+    border-radius: 100px;
+    padding: 1px;
+    margin: 10px;
+    cursor: pointer;
+    transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+    align-items: center;
+    position: relative;
+    display: inline-block;
+    width: 51px;
+    height: 29px;
+    box-shadow: rgba(0, 0, 0, 0.62) 0px 0px 5px inset, rgba(0, 0, 0, 0.21) 0px 0px 0px 24px inset,
+          #22cc3f 0px 0px 0px 0px inset, rgba(224, 224, 224, 0.45) 0px 1px 0px 0px;
+  }
+  
+  .slider::after {
+    content: "";
+    display: flex;
+    top: 2.3px;
+    left: 2px;
+    width: 26px;
+    height: 26px;
+    background-color: #e3e3e3;
+    border-radius: 200px;
+    position: absolute;
+    box-shadow: transparent 0px 0px 0px 2px, rgba(0, 0, 0, 0.3) 0px 6px 6px;
+    transition: left 300ms cubic-bezier(0.4, 0, 0.2, 1) 0s, background-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
+    will-change: left, background-color;
+  }
+  
+  .switch input[type="checkbox"]:checked + .slider {
+    box-shadow: rgba(0, 0, 0, 0.62) 0px 0px 5px inset, #22cc3f 0px 0px 0px 2px inset, #22cc3f 0px 0px 0px 24px inset,
+          rgba(224, 224, 224, 0.45) 0px 1px 0px 0px;
+  }
+  
+  .switch input[type="checkbox"]:checked + .slider::after {
+    left: 24px;
+  }
+  
+  .switch input[type="checkbox"] {
+    display: none;
+  }

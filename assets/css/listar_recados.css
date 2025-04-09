@@ -1,0 +1,295 @@
+.body_mural{
+    max-width: 832px;
+    position: relative;
+    margin: 0 auto;
+    /* max-height: 100vh;
+    height: 100vh;
+    overflow-y: hidden; */
+}
+.title_principal{
+    text-align: center;
+    font-size: 45px;
+    font-family: "Montserrat";
+    transition: .3s;
+    margin-bottom: 25px;
+}
+.icon_card_recado_excluir, .icon_card_recado_editar{
+    cursor: pointer;
+    
+}
+button{
+    border:  0 ;
+    padding: 0;
+}
+.geral{
+
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
+}
+.content{
+
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+
+}
+  
+.card{
+
+    width: 200px;
+    height: 300px;
+    background-color: #064A8C;
+    border-radius: 20px;
+    box-shadow: 0px 5px 5px 0px #F7941D;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    
+}
+.msg_aviso{
+    overflow: hidden;
+    max-height: 300px;
+    color: white;
+    word-wrap: break-word;
+   
+    max-width: 200px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    position: absolute;
+    padding: 10px;
+
+}
+
+.area_btn_add{
+
+    width: 150px;
+    height: 200px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.img_btn_add{
+
+    position: relative;
+    z-index: 9;
+    cursor: pointer;
+    width: 70px;
+    transition: 0.4s;
+}
+.img_btn_add:hover{
+
+    transform: scale(1.1);
+    filter: drop-shadow(2px 2px 2px #6d6d6d);
+
+}
+.area_bot{
+
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    opacity: 0;
+    transition: 0.2s linear;
+    pointer-events: none;
+
+}
+.card:hover .area_bot{
+
+
+    opacity: 1;
+    pointer-events: all;
+
+}
+
+.bloco_bot{
+
+    width: 100%;
+    height: 30%;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 20px;
+    display: flex;
+    position: relative;
+    z-index: 3;
+    align-items: center;
+    justify-content: space-around;
+    
+
+}
+.area_cards_recados_mural{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    /* padding: 15px; */
+    width: 94%;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    position: relative;
+    height: 60vh;
+    overflow-y: scroll;
+    scrollbar-color: #FAA916;
+    gap: 10px;
+        /* margin-bottom: 10px; */
+
+}
+
+.area_cards_recados_mural::-webkit-scrollbar{
+    width: 8px;
+    background-color: #eeeeee;
+    border-radius: 10px;
+}
+  
+.area_cards_recados_mural::-webkit-scrollbar-thumb{
+background-color: #FAA916;
+border-radius: 10px; 
+} 
+
+.area_modal_excluir_recado{
+
+   display: none;
+   flex-direction: column;
+   width: 500px;
+   border-radius: 15px;
+   height: 250px;
+   top: 50%;
+   
+   left: 50%;
+   transform: translate(-50% ,-50%);
+   position: fixed;
+   z-index: 9;
+   
+   background-color: rgb(255, 255, 255);
+
+}
+.area_modal_excluir_recado.active{
+
+    display: flex;
+
+}
+.title_modal_excluir{
+
+    font-size: 25px;
+    text-align: center;
+    margin-top: 50px;
+    width: 100%;
+    padding: 20px;
+
+}
+
+.area_btns_modal_excluir{
+    position: absolute;
+    width: 100%;
+    bottom: 30px;
+    display: flex;
+    justify-content: space-around;
+}
+.overlay_modal_excluir_recado{
+
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 1059;
+    
+    top: 0;
+    left: 0;
+
+
+    display: none;
+    opacity: 0;
+
+}
+
+.overlay_modal_excluir_recado.active{
+    display: block;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 1;
+}
+
+.botao-padrao-inicio{
+     
+    width: 91%;
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 40px;
+
+}
+
+.botao-inicio-submit{
+    position: relative;
+    width: 180px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    height: 45px;
+    background-color: transparent;
+    border: 3px solid var(--cor-primaria-botao-green);
+    border-radius: 20px;
+    cursor: pointer;
+    color: var(--cor-primaria-botao-green);
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+
+
+}
+
+.botao-inicio-submit:hover{
+    transition: all 0.4s;
+    background-color: transparent;
+    color: var(--cor-primaria-botao-white);
+}
+.botao-confirmar-submit{
+    width: 150px;
+    height: 40px;
+    background-color: var(--cor-primaria-botao-white);
+    border: 3px solid var(--cor-primaria-botao-green);
+    border-radius: 20px;
+    cursor: pointer;
+    color: var(--cor-primaria-botao-green);
+    font-style: normal;
+    font-size: 'Montserrat';
+    font-weight: 580;
+    font-size: 15px;
+ 
+}
+.botao-cancelar-submit{
+    width: 150px;
+height: 40px;
+background-color: var(--cor-primaria-botao-white);
+border: 3px solid var(--cor-primaria-botao-red);
+border-radius: 20px;
+cursor: pointer;
+color: var(--cor-primaria-botao-red);
+font-style: normal;
+font-size: 'Montserrat';
+font-weight: 580;
+font-size: 15px;
+}
+@media(max-width: 650px){
+
+    .title_principal{
+        font-size: 30px;
+    }
+
+}
+
+@media(max-width: 450px){
+
+    .area_cards_recados_mural{
+
+        width: 95%;
+    }
+}

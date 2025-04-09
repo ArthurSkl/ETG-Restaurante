@@ -1,0 +1,443 @@
+*{
+
+    margin: 0;
+    padding: 0;
+
+}
+/* KKKKKKKKKKKKKK */
+body{
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(-215deg,#064A8C ,#000 70%);
+    overflow: hidden;
+}
+.area_login{
+
+    position: relative;
+    width: 100%;
+    height: 100vh; 
+    overflow: hidden;
+
+
+}
+ 
+
+.quadrado_input_login{
+    transition: 1s;
+    width: 80vh;
+    height: 80vh;
+    opacity: 0.75;
+    position: absolute;
+    background-color: #F3F3F3;
+    transform: rotate(-45deg);
+    left: -40vh;
+    bottom: 10%;
+    border-radius: 50px;
+}
+ 
+
+.wave_login{
+
+    position: absolute;
+    bottom: -25%;
+    transition: 0.5s;
+    width: 200%;
+    height:50%;
+    left: -50%;
+    animation: waveA 10s ease-in-out infinite alternate;
+    opacity: 0.75;
+    pointer-events: none;
+
+    
+
+}
+@keyframes waveA {
+
+    0%{
+
+        transform: rotateZ(0deg);
+
+    }
+    50%{
+
+        transform: rotateZ(5deg);
+    }
+
+    100%{
+
+        transform: rotateZ(-10deg);
+
+    }
+}
+ 
+.wave2{
+
+ /* animation: waveA1 5s ease-in-out infinite alternate; */
+   
+    animation: waveA1 5s ease-in-out infinite alternate;
+    transform: rotateZ(15deg);
+    height: 90%;
+
+}
+
+
+@keyframes waveA1 {
+
+    0%{
+
+        transform: rotateZ(0deg);
+
+    }
+    50%{
+
+        transform: rotateZ(5deg);
+    }
+
+    100%{
+
+        transform: rotateZ(-10deg);
+
+    }
+}
+
+
+.wave3{
+
+    animation: waveA3 5s ease-in-out infinite alternate;
+    transform: rotateZ(15deg) rotateX(180deg);
+    height: 65%;
+    left: -30%;
+   
+     
+}
+
+@keyframes waveA3 {
+
+    0%{
+
+        transform: rotateZ(0deg);
+
+    }
+    50%{
+
+        transform: rotateZ(-10deg);
+    }
+
+    100%{
+
+        
+        transform: rotateZ(5deg);
+
+    }
+}
+
+
+.area_inputs_tela_login{
+
+    width: 500px;
+    height: 300px;
+    position: fixed;
+    background-color: transparent;
+    transition: 1s;
+    
+    top: 40%; 
+    left: 20px;
+
+}
+
+.content_input{
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+     
+    height: 45px;
+
+     
+}
+
+ .input_person{
+    height: 100%;
+    width: 500px;
+     
+    display: flex;
+    flex-direction: column; 
+    position: relative;
+    bottom: 2px;
+    left: 10px;
+    top: 18px;
+    
+ }
+
+ .input_default_login{
+
+    background-color: transparent;
+    outline: none;
+    border: none;
+    width: 80%;
+    position: absolute;
+    height: 25px;
+    font-size: 17px;
+    
+
+ }
+ .label_for_input_login{
+    
+    transition: 0.2s ;
+    pointer-events: none;
+    top: 0;
+    opacity: 0.5;
+    font-size: 20px;
+    position: relative;
+    
+
+
+ }
+
+ .input_default_login:focus + .label_for_input_login , 
+ .input_default_login:valid + .label_for_input_login{
+
+    position: relative;
+    top: -25px;
+
+ }
+
+
+
+.line_login{
+
+    width: 80%;
+    height: 2px;
+    background-color: black;
+
+}
+
+.area_input{
+
+    width: 100%;
+    display: flex;
+    align-items: end;
+    gap: 10px;
+    height: 100%;
+    margin-top: 20px;
+
+}
+
+.area_link_login{
+    width: 80%;
+    display: flex;
+    justify-content: end;
+
+}
+.area_img_input{
+
+    height: 45px;
+    width: 45px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.img_input.perfil{
+
+    width: 25px;
+    height: 32px;
+    position: relative;
+    top: 5px;
+
+}
+
+.img_input.password{
+
+    width: 32px;
+    height: 30px;
+    position: relative;
+    top: 7px;
+
+}
+
+.img_input.matricula{
+
+   
+    position: relative;
+    
+    top: 9px;
+
+}
+
+
+.area_link{
+
+    width: 63%;
+    display: flex;
+    justify-content: end;
+     
+  
+
+}
+
+.area_link a{
+
+    color: #004A8D;
+    text-decoration: none;
+    position: absolute;
+    margin-right: 3%;
+
+
+}
+ 
+
+
+
+.area_btn_sub_login{
+
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    margin-top: 5%;
+}
+
+.btn_sub_login{
+
+    position: relative;
+    left: 48px;
+
+    background-color: #064A8C;
+    width: 50%;
+    height: 40px;
+    margin-top: 50px;
+    border-radius: 10px;
+    color: white;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 1s;
+}
+.btn_sub_login:hover{
+
+    background-color: #064A8C;
+
+}
+
+.img_logo_login{
+
+  position: absolute;
+  top: 35px;
+  right: 35px;
+  width: 20%;
+  margin-right: 5px;
+}
+
+.credIncor{
+    color: red;
+    width: 90%;
+    margin-top: 50px;
+    position: absolute;
+}
+
+
+@media (max-height:950px) {
+
+    .input_person{
+
+        width: 350px;
+
+    }
+
+    .btn_sub_login{
+
+        width: 200px;
+
+    }
+    .area_inputs_tela_login{
+
+        width: 400px;
+
+    }
+    
+}
+
+@media (max-height:800px) {
+
+    .input_person{
+
+        width: 300px;
+
+    }
+
+    .btn_sub_login{
+
+        width: 100px;
+
+    }
+    .area_inputs_tela_login{
+
+        width: 300px;
+        top: 32%;
+
+    }
+
+    
+    
+}
+@media (max-height: 625px) {
+
+    .area_inputs_tela_login{
+
+        top: 30%;
+
+    }
+}
+
+
+
+@media (min-height:820px){
+
+    .wave_login{
+
+        height: 60%;
+
+    }
+
+}
+
+.wave3{
+
+    height: 70%; 
+
+}
+
+@media(max-width: 1100px){
+
+    .wave_login{
+
+        
+        width: 250%;
+        left: -50%;
+        height: 50%;
+        bottom: -20%;
+         
+    }
+
+    .wave2{
+
+        width: 250%;
+        left: -75%;
+        height: 65%;
+
+
+    }
+
+    .wave3{
+
+        width: 300%;
+        left: -75%;
+        height: 70%;
+
+
+    }
+
+}

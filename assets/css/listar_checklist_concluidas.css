@@ -1,0 +1,196 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+h1{
+    text-align: center;
+}
+*{
+    font-family: 'Montserrat';
+    
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+.body-tela{
+    max-width: 832px;
+    position: relative;
+    margin: 0 auto;
+}
+.container_title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 25px;
+}
+.container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 500px;
+    font-family: 'Montserrat';
+}
+.lista{
+    width: 85%;
+}
+/* @media screen and (max-width: 420px){
+    .lista{
+        width: 90%;
+    }
+    
+} */
+.card{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+    background-color: #F9F8F8;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+.card .card_detalhes{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+/* @media screen and (max-width: 800px){
+    .card .card_detalhes{
+        
+    }
+} */
+.card_img{
+    position: relative;
+    min-width: 250px;
+    max-width: 250px;
+    height: 20px;
+    min-height: 100px;
+    border-radius: 5px;
+    background-color: #C4C4C4;
+}
+.img_sala{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.cod_sala{
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    background-color: #212121c7;
+    padding: 2px 5px;
+    color: white;
+    border-radius: 5px;   
+}
+.card_info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* flex-grow: 1; */
+    margin-left: 10px;
+    height: 100%;
+    min-width: 310px;
+    max-width: 310px;
+}
+.card .card_text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+.card .card_header_title{
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+.card .card_header_subtitle{
+    max-height: fit-content;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+.card .card_icon{
+    font-size: 25px;
+}
+.card .card_icon .bi-exclamation-octagon{
+    color: #FF0000;
+    position: relative;
+}
+.card .bi-exclamation-diamond{
+    color: #eed202;
+    position: relative;
+}
+.card .card_icon .bi-check-square{
+    color: #00a000;
+    position: relative;
+}
+.pagination{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 20px;
+    color: #000 ;
+    font-weight: bold;
+    margin-bottom: 50px;
+    font-size: 20px;
+}
+.pagination .numeros{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-left: 5px; */
+}
+.pagination .numeros a{
+    margin: 0 5px 0 5px;
+    padding: 5px; 
+}
+.pagination .form_pages{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+.pagination .form_pages #select_pages{
+    font-size: 18px;
+    font-weight: bold;
+}
+.btn_pagination{
+    margin-left: 5px;
+    padding: 0 10px;
+    font-size: 20px;
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+@media screen and (max-width: 750px){
+    .card_info{
+        justify-content: center;
+    }
+    .card .card_detalhes{
+        flex-wrap: wrap;
+    }
+    
+}
+@media screen and (max-width: 460px){
+    .card_info{
+        min-width: 0;
+    }
+    .card .card_header_title{
+        font-size: 16px;
+    }
+    .card .card_header_subtitle{
+        font-size: 13px;
+    }
+    .card .card_img{
+        min-width: 0;
+    }
+}

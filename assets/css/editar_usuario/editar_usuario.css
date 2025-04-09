@@ -1,0 +1,233 @@
+*{
+  margin: 0;
+  box-sizing: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+.pai-de-todos{
+  width: 94%;  
+  margin: 0 auto;
+}
+
+.titulo-perfil{
+  margin-top: 7%;
+  font-family: 'Montserrat';
+  font-weight: bold;
+  font-size: 45px;
+}
+.imagem_user{
+
+  height: 100%;
+  width: 100%;
+  border-radius: 80px;
+}
+
+@media screen and (max-width:500px ){
+
+  .titulo-perfil{
+    font-size: 30px;
+  }
+
+  .name-name{
+    font-size: 20px;
+  }
+
+  .titulo_alterar_senha h1{
+    font-size: 20px;
+  }
+
+}
+
+
+.form-minha-conta{
+  margin-top: 2%; /* 50px*/
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scrollbar-color: #FAA916;
+  max-height: 60vh; /*60vh*/
+
+}
+
+.form-minha-conta::-webkit-scrollbar{
+  width: 8px;
+  background-color: #eeeeee;
+  border-radius: 10px;
+}
+
+.form-minha-conta::-webkit-scrollbar-thumb{
+background-color: #FAA916;
+border-radius: 10px; 
+} 
+.foto-perfil{
+  margin-top: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 130px;
+  height: 130px;
+  flex-shrink: 0;
+  background-color: aqua;
+  border-radius: 15px;
+  border: 1px solid #FFF;
+  background: url(<path-to-image>), lightgray 50% / cover no-repeat;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 10000000%;
+
+}
+
+.bi-person-circle::before {
+  font-size: 100px;
+}
+
+.bi-pencil-square::before {
+  font-size: 160%;
+}
+
+.icon-edit{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3%;
+}
+
+.titulo-perfil{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.quadrado-perfil{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.alinhar-input{ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; 
+  margin-top: 2%;
+  width: 100%;
+
+} 
+
+.area_btn_alterar_nome{
+
+height: 50px;
+width: 700px; 
+display: flex;
+align-items: center;
+justify-content: end;
+pointer-events: none;
+opacity: 0;
+transition: 0.5s;
+
+}
+
+.area_btn_alterar_nome.active{
+
+pointer-events: auto;
+opacity: 1;
+
+}
+
+
+.area_btn_alterar_nome input{
+
+margin-right: 20px;
+background-color: #064A8C;
+padding: 7px 15px;
+border: none;
+border-radius: 10px;
+color: white;
+font-size: 17px;
+font-family: 'Montserrat';
+font-weight: bold;
+cursor: pointer;
+transition: .2s;
+
+}
+.area_btn_alterar_nome input:hover{
+
+padding: 9px 15px;
+
+}
+.name{
+margin-top: 10%;
+padding-left: 8%;
+}
+
+.name-name{
+font-family: 'Montserrat';
+font-weight: bold;
+margin-top: 2%;
+}
+
+.alinhar-botao{
+margin-top: 20%;
+
+}
+
+.alterar-senha{
+margin-top: 3%;
+font-size: 20px;
+display: flex;
+justify-content: start;
+width: 83%;
+}
+
+.alterar-senha a{
+font-family: 'Montserrat';
+font-weight: bold;
+}
+
+#icon-input{
+position: absolute;
+top: 10px;
+right: 3%;
+cursor: pointer;
+z-index: 99;
+margin-top: 1%;
+display: flex;
+justify-content: end;
+}
+
+.img_user{
+
+object-fit: cover;  
+width: 100%;
+height: 100%;
+border-radius: 1000000%;
+
+}
+
+@media(min-width: 832px){
+#icon-input{
+  margin-top: 1%;
+
+}
+
+}
+
+.bi.bi-pencil-square.kkk{
+position: absolute;
+right: 20px;
+}
+
+.select_perfil{
+  width: 100%;
+  height: 35px;
+  border: none;
+  font-size: 21px;
+  color: #747474;
+  font-family: 'Montserrat';
+}
+.barra{
+  width: 84%;
+  border: solid #9b9b9b 1px;
+}
