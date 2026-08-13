@@ -49,7 +49,7 @@ class ResponderChecklist
                 $last_id = $obj_banco -> insertRecoverId($responder_check);
                 // return $obj_banco -> insertRecoverId($responder_check);
             }catch(PDOException $e){
-                echo(json_encode($e->getMessage()));
+                error_log('Erro ao cadastrar responder_check: ' . $e->getMessage());
             }
             
              
@@ -78,7 +78,7 @@ class ResponderChecklist
      
                    $nao_conformidade = [
                        'id_realiza' =>  $last_id,
-                       'id_user' => $_SESSION['id_user'],
+                       'id_prof' => $_SESSION['id_user'],
                        'id_pergu' => $dataResp['id_pergunta'],
                        'descricao_NC' => $dataResp['descricao'],
                        'img1' => (isset($imgs_nc[0])) ? $imgs_nc[0] : '',
@@ -151,7 +151,7 @@ class ResponderChecklist
      
                    $nao_conformidade = [
                        'id_realiza' =>  $id_last_insert,
-                       'id_user' => $_SESSION['id_user'],
+                       'id_prof' => $_SESSION['id_user'],
                        'id_pergu' => $dataResp['id_pergunta'],
                        'descricao_NC' => $dataResp['descricao'],
                        'img1' => (isset($imgs_nc[0])) ? $imgs_nc[0] : '',
@@ -240,7 +240,7 @@ class ResponderChecklist
             
             $nao_conformidade = [
                 'id_realiza' =>  $id_last_insert,
-                'id_user' => $_SESSION['id_user'],
+                'id_prof' => $_SESSION['id_user'],
                 'id_pergu' => $pergunta['id_pergu'],
                 'descricao_NC' => $pergunta['descricao_NC'],
                 'img1' => (isset($nome1)) ? $nome1 : '',

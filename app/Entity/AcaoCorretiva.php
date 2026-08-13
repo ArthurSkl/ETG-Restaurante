@@ -25,7 +25,6 @@ class AcaoCorretiva
         try {
             $dados = [
                 "reg_NC_id" => $this->id_nao_conformidade,
-                "id_usuario" => $this->id_usuario,
                 "descricao" => $this->descricao,
                 "img1" => $this->img_1,
                 "img2" => $this->img_2,

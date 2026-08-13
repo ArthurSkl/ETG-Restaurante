@@ -511,6 +511,8 @@ CREATE TABLE `responder_check` (
   `data_fechamento` timestamp NULL DEFAULT NULL,
   `conf_logis` enum('s','n') DEFAULT 'n',
   `id_checklist` int DEFAULT NULL,
+  `observacao` text,
+  `observacao_pos` text,
   PRIMARY KEY (`id`),
   KEY `fk_realiza_check_perfil_funcionarios1_idx` (`id_usuario`),
   KEY `fk_realiza_check_salas1_idx` (`id_sala`),

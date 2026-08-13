@@ -82,7 +82,7 @@ class Banco{
         }
         catch (PDOException $e)
         {
-            echo('Erro3: ' . $e -> getMessage());
+            error_log('Erro3: ' . $e -> getMessage());
             return false;
         }
     }
