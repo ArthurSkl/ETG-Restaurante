@@ -178,7 +178,7 @@ class Banco{
     }
 
     //Metodo criado pra executar o comando SQL -> `SELECT`
-    public function select($where = null, $order = null, $limit = null, $campos = '*')
+    public function select($where = '', $order = '', $limit = '', $campos = '*')
     {
         /*Usando OPERADOR TERNARIO para concatenar ou nao
         Se o parametro $where tiver mais que uma string, sera concatenado com uma
