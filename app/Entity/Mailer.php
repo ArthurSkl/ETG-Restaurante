@@ -12,20 +12,58 @@ class Mailer
 {
     public $email;
 
+    private static $config = null;
+
+    private static function config()
+    {
+        if (self::$config === null) {
+            self::$config = parse_ini_file(__DIR__."/../../config.ini", true);
+        }
+        return self::$config;
+    }
+
+    private static function mailerConfig()
+    {
+        $cfg = isset(self::config()['mailer']) ? self::config()['mailer'] : [];
+        return [
+            'host'     => isset($cfg['host']) && $cfg['host'] !== '' ? $cfg['host'] : 'smtp.gmail.com',
+            'port'     => isset($cfg['port']) && $cfg['port'] !== '' ? $cfg['port'] : '587',
+            'user'     => isset($cfg['user']) ? $cfg['user'] : '',
+            'password' => isset($cfg['password']) ? $cfg['password'] : '',
+            'from'     => isset($cfg['from']) ? $cfg['from'] : '',
+        ];
+    }
+
+    private static function baseUrl()
+    {
+        $base = isset(self::config()['app']['base_url']) ? trim(self::config()['app']['base_url']) : '';
+        if ($base !== '') {
+            return rtrim($base, '/');
+        }
+        $scheme = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https' : 'http';
+        $host = isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : 'localhost';
+        return $scheme . '://' . $host;
+    }
+
     static function sendEmail($emailparam)
     {
-    
+        $mailer = self::mailerConfig();
+        if ($mailer['user'] === '' || $mailer['password'] === '') {
+            error_log('ETG: credenciais SMTP nao configuradas em config.ini');
+            return false;
+        }
+
         $email = new PHPMailer();
         $email->isSMTP();
-        $email->Host = "smtp.gmail.com";
+        $email->Host = $mailer['host'];
         $email->SMTPAuth = "true";
         $email->SMTPSecure = "tls";
-        $email->Port ="587";
-        $email->Username = "fabrica.hub.academy@gmail.com";
-        $email->Password = "ciaiabsuzjimabht";
+        $email->Port = $mailer['port'];
+        $email->Username = $mailer['user'];
+        $email->Password = $mailer['password'];
 
         $email->Subject = "Codigo Redefinicao Senac";
-        $email->setFrom("fabrica.hub.academy@gmail.com");
+        $email->setFrom($mailer['from']);
         $email->addStringAttachment(file_get_contents("https://miro.medium.com/v2/resize:fit:1400/1*m0H6-tUbW6grMlezlb52yw.png"), "qr.jpg");
         
         $codigo = rand(100000, 999999);
@@ -51,18 +89,23 @@ class Mailer
 
     public function sendEmailNotificacao($emailparam, $content, $remetente, $destinatario )
     {
-        
+        $mailer = self::mailerConfig();
+        if ($mailer['user'] === '' || $mailer['password'] === '') {
+            error_log('ETG: credenciais SMTP nao configuradas em config.ini');
+            return false;
+        }
+
         $email = new PHPMailer();
         $email->isSMTP();
-        $email->Host = "smtp.gmail.com";
+        $email->Host = $mailer['host'];
         $email->SMTPAuth = "true";
         $email->SMTPSecure = "tls";
-        $email->Port ="587";
-        $email->Username = "fabrica.hub.academy@gmail.com";
-        $email->Password = "ciaiabsuzjimabht";
+        $email->Port = $mailer['port'];
+        $email->Username = $mailer['user'];
+        $email->Password = $mailer['password'];
         $email->CharSet = 'UTF-8';
         $email->Subject = "=?UTF-8?B?".base64_encode("Notificação enviada por ".$remetente['nome'])."?=";
-        $email->setFrom("fabrica.hub.academy@gmail.com","=?UTF-8?B?".base64_encode("Fábrica de Software")."?="); 
+        $email->setFrom($mailer['from'],"=?UTF-8?B?".base64_encode("Fábrica de Software")."?="); 
 
         $email->Body = $this->createEmbedMail('Notificação Recebida', $destinatario['nome'], $content, 'Ver Notificação', '#007bff');
         $email->addAddress($emailparam); 
@@ -84,21 +127,25 @@ class Mailer
 
     public function sendEmailNConformidade($emailparam, $content, $remetente, $destinatario, $imgs, $textNConformidade )
     {
-        
+        $mailer = self::mailerConfig();
+        if ($mailer['user'] === '' || $mailer['password'] === '') {
+            error_log('ETG: credenciais SMTP nao configuradas em config.ini');
+            return false;
+        }
+
         $email = new PHPMailer();
         $email->isSMTP();
-        $email->Host = "smtp.gmail.com";
+        $email->Host = $mailer['host'];
         $email->SMTPAuth = "true";
         $email->SMTPSecure = "tls";
-        $email->Port ="587";
-        $email->Username = "fabrica.hub.academy@gmail.com";
-        
-        $email->Password = "ciaiabsuzjimabht";
+        $email->Port = $mailer['port'];
+        $email->Username = $mailer['user'];
+        $email->Password = $mailer['password'];
 
         $email->CharSet = 'UTF-8'; // Definir a codificação para UTF-8
 
         $email->Subject = "=?UTF-8?B?".base64_encode("Não Conformidade Registrada")."?=";
-        $email->setFrom("fabrica.hub.academy@gmail.com","=?UTF-8?B?".base64_encode("Fábrica de Software")."?="); 
+        $email->setFrom($mailer['from'],"=?UTF-8?B?".base64_encode("Fábrica de Software")."?="); 
 
         $email->Body = $this->createEmbedMail('Não Conformidade', $destinatario['nome'], $content, 'Ver Não Conformidade', '#ff5050',$imgs, textNConformidade: $textNConformidade);
         $email->addAddress($emailparam); 
@@ -184,7 +231,7 @@ class Mailer
                 <p>Olá, '.$nome_destinatario.'</p>
                 <p>'.$descricao.'</p>
                 '.$textNC.'
-                <a style="color:white;" href="http://192.168.22.9/etg_escola" class="btn">'.$nome_btn.'</a>
+                <a style="color:white;" href="'.self::baseUrl().'" class="btn">'.$nome_btn.'</a>
                 
             </div>
             <div class="footer">

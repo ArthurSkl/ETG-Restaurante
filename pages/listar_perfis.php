@@ -34,7 +34,7 @@ foreach ($dados_perfil as $row_perfil)
                     <h2 class="tipo_perfil">'.$row_perfil["nome"].'</h2>
                 </div>
                 <div class="icons-question1">
-                <a href="/ETG_Escola_homologacao/pages/editar_perfil.php?id='.$row_perfil["id"].'">
+                <a href="editar_perfil.php?id='.$row_perfil["id"].'">
                     <i class="bi bi-pencil-square"></i>
                 </a> 
                 <div class="testebotao"  id="botao-excluir-id" onclick="callPopUp(this)">

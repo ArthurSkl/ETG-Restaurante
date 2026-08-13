@@ -57,6 +57,17 @@ Este projeto foi desenvolvido utilizando as seguintes tecnologias:
 - MySQL
 - XAMPP, WAMP, Laragon ou qualquer outro ambiente local
 
+## ⚙️ Configuração e Deploy
+
+1. Copie `config.ini.example` para `config.ini` e preencha os valores do ambiente.
+2. Importe `banco_etg.sql` no banco de dados.
+3. Rode `composer install` na raiz (gera o `vendor/autoload.php` exigido pelas páginas).
+4. Garanta que `storage/salas/`, `storage/n_conformidade/` e `storage/acao_corretiva/` sejam graváveis.
+5. Emails (SMTP): preencha `[mailer]` em `config.ini` — o remetente real deve ser configurado no servidor e **não versionado** (o arquivo `config.ini` está no `.gitignore`).
+6. URL pública: preencha `[app] base_url` em `config.ini` (ex.: `https://etg.exemplo.com.br`). Se vazio, a URL é detectada automaticamente a partir da requisição.
+
+> ⚠️ `config.ini` não é versionado — nunca comite credenciais reais nele.
+
 ---
 
 Desenvolvido com 💡 e ☕ por **Arthur Augusto** e equipe.

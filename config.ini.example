@@ -1,0 +1,23 @@
+; Copie este arquivo para `config.ini` e preencha com os valores do seu ambiente.
+; Exemplo: cp config.ini.example config.ini
+
+[database]
+host="localhost"
+user="root"
+password=""
+db_name="etg2"
+
+[app]
+; URL publica do sistema (ex.: https://etg.exemplo.com.br).
+; Se vazio, a URL e detectada automaticamente a partir da requisicao.
+base_url=""
+
+[mailer]
+; Credenciais SMTP para envio de e-mails.
+; IMPORTANTE: preencha no servidor e NAO versione segredos reais neste arquivo.
+; (Gmail requer "senha de aplicativo" gerada na conta Google.)
+host="smtp.gmail.com"
+port="587"
+user=""
+password=""
+from=""
