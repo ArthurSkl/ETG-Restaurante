@@ -217,22 +217,19 @@ class Banco{
         $query = 'SELECT 1 AS result
         WHERE EXISTS (
             SELECT 1
-            FROM cadastro_usuario
-            RIGHT JOIN etg2.responder_check ON etg2.cadastro_usuario.id = etg2.responder_check.id_usuario
-            WHERE etg2.cadastro_usuario.id = '.$id_usuario.'
+            FROM responder_check
+            WHERE responder_check.id_usuario = '.$id_usuario.'
         )
         OR EXISTS (
             SELECT 1
-            FROM cadastro_usuario
-            RIGHT JOIN etg2.reg_nc ON etg2.cadastro_usuario.id = etg2.reg_nc.id_user
-            WHERE etg2.cadastro_usuario.id = '.$id_usuario.'
+            FROM reg_nc
+            WHERE reg_nc.id_prof = '.$id_usuario.' OR reg_nc.id_logistica = '.$id_usuario.'
         )
-        
         OR EXISTS (
             SELECT 1
-            FROM cadastro_usuario
-            RIGHT JOIN etg2.reg_correcao ON etg2.cadastro_usuario.id = etg2.reg_correcao.id_usuario
-            WHERE etg2.cadastro_usuario.id = '.$id_usuario.'
+            FROM reg_correcao
+            JOIN reg_nc ON reg_nc.id = reg_correcao.reg_NC_id
+            WHERE reg_nc.id_prof = '.$id_usuario.' OR reg_nc.id_logistica = '.$id_usuario.'
         );';
         return $this -> executarQuery($query);
     }

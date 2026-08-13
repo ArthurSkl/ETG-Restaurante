@@ -51,7 +51,7 @@ if (count($dadosNC) > 0) {
     
     
             $dados_nao_conformidade = ["id_realiza" => $id_realiza,
-            "id_user" => $_SESSION['id_user'],
+            "id_logistica" => $_SESSION['id_user'],
             "id_pergu" => $nc["id_pergunta"],
             "descricao_NC" => $nc["descricao_n_conformidade"],
             "img1" => $img1,

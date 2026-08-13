@@ -58,6 +58,7 @@ CREATE TABLE `cadastro_perfil` (
   `realizar_acao_corretiva` enum('0','1') DEFAULT NULL,
   `realizar_checklist` enum('0','1') DEFAULT NULL,
   `gerenciar_perguntas` enum('0','1') DEFAULT NULL,
+  `ver_relatorios` enum('0','1') DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=47 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -71,6 +72,13 @@ LOCK TABLES `cadastro_perfil` WRITE;
 INSERT INTO `cadastro_perfil` VALUES (1,'Administrador','1','1','1','1','1','1','1','1','1'),(6,'High power','1','1','1','1','1','1','1','1','1'),(32,'Estagiário do Crime','1','1','1','1','1','1','1','0','1'),(34,'estagiaria Antiga','1','1','1','1','1','1','1','1','1'),(36,'teste ','0','0','0','0','0','0','0','0','0'),(40,'Estagiário Logística','0','0','0','0','1','1','1','1','0'),(42,'Docente','0','0','0','0','0','0','0','1','0'),(43,'Perfil para mandar notifi','0','0','0','0','1','0','0','0','0'),(44,'Administrador','1','1','1','1','1','1','1','1','1'),(45,'docentelucas','1','1','1','1','1','1','0','1','1'),(46,'Docente ','1','0','0','0','1','1','0','1','1');
 /*!40000 ALTER TABLE `cadastro_perfil` ENABLE KEYS */;
 UNLOCK TABLES;
+
+--
+-- ver_relatorios: perfis administrativos enxergam o menu de relatórios
+--
+
+UPDATE `cadastro_perfil` SET `ver_relatorios` = '1'
+WHERE `gerenciar_perfis` = '1' AND `gerenciar_usuarios` = '1';
 
 --
 -- Table structure for table `cadastro_pergunta`
@@ -285,7 +293,8 @@ SET @saved_cs_client     = @@character_set_client;
  1 AS `gerenciar_recados`,
  1 AS `gerenciar_notificacoes`,
  1 AS `gerenciar_perfis`,
- 1 AS `gerenciar_perguntas`*/;
+ 1 AS `gerenciar_perguntas`,
+ 1 AS `ver_relatorios`*/;
 SET character_set_client = @saved_cs_client;
 
 --
@@ -509,7 +518,7 @@ CREATE TABLE `responder_check` (
   `id_sala` int NOT NULL,
   `data_abertura` timestamp NULL DEFAULT (now()),
   `data_fechamento` timestamp NULL DEFAULT NULL,
-  `conf_logis` enum('s','n') DEFAULT 'n',
+  `conf_logis` enum('s','n','p') DEFAULT 'n',
   `id_checklist` int DEFAULT NULL,
   `observacao` text,
   `observacao_pos` text,
@@ -546,6 +555,56 @@ SET @saved_cs_client     = @@character_set_client;
 SET character_set_client = @saved_cs_client;
 
 --
+-- Temporary view structure for view `salas_encerradas_docente`
+--
+
+DROP TABLE IF EXISTS `salas_encerradas_docente`;
+/*!50001 DROP VIEW IF EXISTS `salas_encerradas_docente`*/;
+SET @saved_cs_client     = @@character_set_client;
+/*!50503 SET character_set_client = utf8mb4 */;
+/*!50001 CREATE VIEW `salas_encerradas_docente` AS SELECT 
+ 1 AS `nome_sala`,
+ 1 AS `img_sala`,
+ 1 AS `data_fechamento`,
+ 1 AS `conf_logis`,
+ 1 AS `qnt_nc`,
+ 1 AS `nome`*/;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Temporary view structure for view `checklist_respondidas`
+--
+
+DROP TABLE IF EXISTS `checklist_respondidas`;
+/*!50001 DROP VIEW IF EXISTS `checklist_respondidas`*/;
+SET @saved_cs_client     = @@character_set_client;
+/*!50503 SET character_set_client = utf8mb4 */;
+/*!50001 CREATE VIEW `checklist_respondidas` AS SELECT 
+ 1 AS `id_user`,
+ 1 AS `id_check`,
+ 1 AS `nome_check`*/;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Temporary view structure for view `quantidade_nc_user`
+--
+
+DROP TABLE IF EXISTS `quantidade_nc_user`;
+/*!50001 DROP VIEW IF EXISTS `quantidade_nc_user`*/;
+SET @saved_cs_client     = @@character_set_client;
+/*!50503 SET character_set_client = utf8mb4 */;
+/*!50001 CREATE VIEW `quantidade_nc_user` AS SELECT 
+ 1 AS `id_user`,
+ 1 AS `id_checklist`,
+ 1 AS `data_fechamento`,
+ 1 AS `nome`,
+ 1 AS `nome_sala`,
+ 1 AS `nome_check`,
+ 1 AS `qnt_nc`,
+ 1 AS `qnt_c`*/;
+SET character_set_client = @saved_cs_client;
+
+--
 -- Final view structure for view `check_concluidas`
 --
 
@@ -576,7 +635,7 @@ SET character_set_client = @saved_cs_client;
 /*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
 /*!50001 CREATE ALGORITHM=UNDEFINED */
 /*!50013 DEFINER=`fabrica`@`%` SQL SECURITY DEFINER */
-/*!50001 VIEW `perfil_do_user` AS select `cadastro_usuario`.`id` AS `id_user`,`cadastro_perfil`.`gerenciar_usuarios` AS `gerenciar_usuarios`,`cadastro_perfil`.`realizar_acao_corretiva` AS `realizar_acao_corretiva`,`cadastro_perfil`.`realizar_checklist` AS `realizar_checklist`,`cadastro_perfil`.`gerenciar_salas` AS `gerenciar_salas`,`cadastro_perfil`.`gerenciar_checklist` AS `gerenciar_checklist`,`cadastro_perfil`.`gerenciar_recados` AS `gerenciar_recados`,`cadastro_perfil`.`gerenciar_notificacoes` AS `gerenciar_notificacoes`,`cadastro_perfil`.`gerenciar_perfis` AS `gerenciar_perfis`,`cadastro_perfil`.`gerenciar_perguntas` AS `gerenciar_perguntas` from (`cadastro_usuario` join `cadastro_perfil` on((`cadastro_perfil`.`id` = `cadastro_usuario`.`id_perfil`))) */;
+/*!50001 VIEW `perfil_do_user` AS select `cadastro_usuario`.`id` AS `id_user`,`cadastro_perfil`.`gerenciar_usuarios` AS `gerenciar_usuarios`,`cadastro_perfil`.`realizar_acao_corretiva` AS `realizar_acao_corretiva`,`cadastro_perfil`.`realizar_checklist` AS `realizar_checklist`,`cadastro_perfil`.`gerenciar_salas` AS `gerenciar_salas`,`cadastro_perfil`.`gerenciar_checklist` AS `gerenciar_checklist`,`cadastro_perfil`.`gerenciar_recados` AS `gerenciar_recados`,`cadastro_perfil`.`gerenciar_notificacoes` AS `gerenciar_notificacoes`,`cadastro_perfil`.`gerenciar_perfis` AS `gerenciar_perfis`,`cadastro_perfil`.`gerenciar_perguntas` AS `gerenciar_perguntas`,`cadastro_perfil`.`ver_relatorios` AS `ver_relatorios` from (`cadastro_usuario` join `cadastro_perfil` on((`cadastro_perfil`.`id` = `cadastro_usuario`.`id_perfil`))) */;
 /*!50001 SET character_set_client      = @saved_cs_client */;
 /*!50001 SET character_set_results     = @saved_cs_results */;
 /*!50001 SET collation_connection      = @saved_col_connection */;
@@ -649,6 +708,60 @@ SET character_set_client = @saved_cs_client;
 /*!50001 CREATE ALGORITHM=UNDEFINED */
 /*!50013 DEFINER=`fabrica`@`%` SQL SECURITY DEFINER */
 /*!50001 VIEW `user_relatorio` AS select `cadastro_usuario`.`id` AS `id`,`cadastro_usuario`.`nome` AS `nome`,count(`responder_check`.`id_usuario`) AS `quantidade` from (`cadastro_usuario` join `responder_check` on((`cadastro_usuario`.`id` = `responder_check`.`id_usuario`))) where (`responder_check`.`data_fechamento` is not null) group by `cadastro_usuario`.`id` */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
+
+--
+-- Final view structure for view `salas_encerradas_docente`
+--
+
+/*!50001 DROP VIEW IF EXISTS `salas_encerradas_docente`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8mb4 */;
+/*!50001 SET character_set_results     = utf8mb4 */;
+/*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`fabrica`@`%` SQL SECURITY DEFINER */
+/*!50001 VIEW `salas_encerradas_docente` AS select `cadastro_sala`.`nome` AS `nome_sala`,`cadastro_sala`.`img_sala` AS `img_sala`,`responder_check`.`data_fechamento` AS `data_fechamento`,`responder_check`.`conf_logis` AS `conf_logis`,count(`reg_nc`.`id`) AS `qnt_nc`,`cadastro_usuario`.`nome` AS `nome` from (((`responder_check` join `cadastro_sala` on((`cadastro_sala`.`id` = `responder_check`.`id_sala`))) join `cadastro_usuario` on((`cadastro_usuario`.`id` = `responder_check`.`id_usuario`))) left join `reg_nc` on((`reg_nc`.`id_realiza` = `responder_check`.`id`))) where (`responder_check`.`data_fechamento` is not null) group by `responder_check`.`id`,`cadastro_sala`.`id`,`cadastro_usuario`.`id` */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
+
+--
+-- Final view structure for view `checklist_respondidas`
+--
+
+/*!50001 DROP VIEW IF EXISTS `checklist_respondidas`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8mb4 */;
+/*!50001 SET character_set_results     = utf8mb4 */;
+/*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`fabrica`@`%` SQL SECURITY DEFINER */
+/*!50001 VIEW `checklist_respondidas` AS select `responder_check`.`id_usuario` AS `id_user`,`responder_check`.`id_checklist` AS `id_check`,`cadastro_checklist`.`nome` AS `nome_check` from (`responder_check` join `cadastro_checklist` on((`cadastro_checklist`.`id` = `responder_check`.`id_checklist`))) */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
+
+--
+-- Final view structure for view `quantidade_nc_user`
+--
+
+/*!50001 DROP VIEW IF EXISTS `quantidade_nc_user`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8mb4 */;
+/*!50001 SET character_set_results     = utf8mb4 */;
+/*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`fabrica`@`%` SQL SECURITY DEFINER */
+/*!50001 VIEW `quantidade_nc_user` AS select `responder_check`.`id_usuario` AS `id_user`,`responder_check`.`id_checklist` AS `id_checklist`,`responder_check`.`data_fechamento` AS `data_fechamento`,`cadastro_usuario`.`nome` AS `nome`,`cadastro_sala`.`nome` AS `nome_sala`,`cadastro_checklist`.`nome` AS `nome_check`,(select count(0) from `reg_nc` where (`reg_nc`.`id_realiza` = `responder_check`.`id`)) AS `qnt_nc`,(select count(0) from (`reg_correcao` join `reg_nc` on((`reg_nc`.`id` = `reg_correcao`.`reg_NC_id`))) where (`reg_nc`.`id_realiza` = `responder_check`.`id`)) AS `qnt_c` from (((`responder_check` join `cadastro_usuario` on((`cadastro_usuario`.`id` = `responder_check`.`id_usuario`))) join `cadastro_sala` on((`cadastro_sala`.`id` = `responder_check`.`id_sala`))) join `cadastro_checklist` on((`cadastro_checklist`.`id` = `responder_check`.`id_checklist`))) where (`responder_check`.`data_fechamento` is not null) */;
 /*!50001 SET character_set_client      = @saved_cs_client */;
 /*!50001 SET character_set_results     = @saved_cs_results */;
 /*!50001 SET collation_connection      = @saved_col_connection */;
