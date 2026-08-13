@@ -1,10 +1,11 @@
 services:
   - type: web
     name: etg-restaurante
-    runtime: php
+    runtime: docker
     plan: free
     autoDeploy: true
-    buildCommand: composer install --no-dev --prefer-dist
+    dockerContext: .
+    dockerfilePath: ./Dockerfile
     healthCheckPath: /
     envVars:
       - key: APP_URL

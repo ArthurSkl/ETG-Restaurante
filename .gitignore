@@ -1,6 +1,9 @@
 # configuração local (nunca versionar segredos)
 config.ini
 
+# dump adaptado para importação em MySQL 5.7/MariaDB
+banco_etg_free.sql
+
 /vendor/
 vendor/composer/ClassLoader.php
 vendor/composer/installed.php
