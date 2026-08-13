@@ -68,6 +68,19 @@ Este projeto foi desenvolvido utilizando as seguintes tecnologias:
 
 > ⚠️ `config.ini` não é versionado — nunca comite credenciais reais nele.
 
+### Deploy no Render (plano free)
+
+O arquivo [`render.yaml`](render.yaml) configura um web service PHP.
+
+1. Crie um banco **MySQL** grátis (ex.: [freesqldatabase.com](https://www.freesqldatabase.com) ou [db4free.net](https://www.db4free.net)).
+2. Importe `banco_etg.sql` nesse banco (phpMyAdmin → Import).
+3. No Render: **New → Blueprint**, aponte para este repositório.
+4. Em **Environment → Environment Variables**, preencha: `DB_HOST`, `DB_NAME`, `DB_USER`, `DB_PASSWORD`, e (se quiser e-mail) `SMTP_USER`, `SMTP_PASSWORD`, `SMTP_FROM`.
+5. Deploy. O app abre na URL do Render (defina `APP_URL` com essa URL).
+
+> Acessos locais funcionam pelo `config.ini`; no Render, as variáveis de ambiente (`DB_*`, `SMTP_*`, `APP_URL`) têm prioridade.
+> ⚠️ No plano free o disco é efêmero: uploads em `storage/` não persistem entre deploys/restarts.
+
 ---
 
 Desenvolvido com 💡 e ☕ por **Arthur Augusto** e equipe.

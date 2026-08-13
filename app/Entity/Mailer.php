@@ -17,7 +17,7 @@ class Mailer
     private static function config()
     {
         if (self::$config === null) {
-            self::$config = parse_ini_file(__DIR__."/../../config.ini", true);
+            self::$config = file_exists(__DIR__."/../../config.ini") ? parse_ini_file(__DIR__."/../../config.ini", true) : [];
         }
         return self::$config;
     }
@@ -26,17 +26,17 @@ class Mailer
     {
         $cfg = isset(self::config()['mailer']) ? self::config()['mailer'] : [];
         return [
-            'host'     => isset($cfg['host']) && $cfg['host'] !== '' ? $cfg['host'] : 'smtp.gmail.com',
-            'port'     => isset($cfg['port']) && $cfg['port'] !== '' ? $cfg['port'] : '587',
-            'user'     => isset($cfg['user']) ? $cfg['user'] : '',
-            'password' => isset($cfg['password']) ? $cfg['password'] : '',
-            'from'     => isset($cfg['from']) ? $cfg['from'] : '',
+            'host'     => getenv('SMTP_HOST') ?: (isset($cfg['host']) && $cfg['host'] !== '' ? $cfg['host'] : 'smtp.gmail.com'),
+            'port'     => getenv('SMTP_PORT') ?: (isset($cfg['port']) && $cfg['port'] !== '' ? $cfg['port'] : '587'),
+            'user'     => getenv('SMTP_USER') ?: (isset($cfg['user']) ? $cfg['user'] : ''),
+            'password' => getenv('SMTP_PASSWORD') ?: (isset($cfg['password']) ? $cfg['password'] : ''),
+            'from'     => getenv('SMTP_FROM') ?: (isset($cfg['from']) ? $cfg['from'] : ''),
         ];
     }
 
     private static function baseUrl()
     {
-        $base = isset(self::config()['app']['base_url']) ? trim(self::config()['app']['base_url']) : '';
+        $base = getenv('APP_URL') ?: (isset(self::config()['app']['base_url']) ? trim(self::config()['app']['base_url']) : '');
         if ($base !== '') {
             return rtrim($base, '/');
         }
