@@ -27,7 +27,7 @@ $dados_checklist = Checklist::getRespostasChecklist()['checklists'];
 $qntNC = 0;
 $qntC = 0 ;
 $qntCorrecao = 0;
-$dadosPDF = '';
+$dadosPDF = '[]';
 if(isset($_POST['btn_submit_relatorio'])){
 
     $user = isset($_POST['users_select']) ? $_POST['users_select'] != 'Selecione o Usuário' ? $_POST['users_select'] : '' : '';

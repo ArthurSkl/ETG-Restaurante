@@ -122,6 +122,41 @@ foreach($dados as $sala){
             </tbody>';
             }
 
+        if($sala['conf_logis'] == 'p'){
+            $salas_lista .='
+            <tbody class="body-tabela">
+                <td class="area-sala">
+                    <div class="div-td">
+                        <img src="../storage/salas/'.$sala['img_sala'].'" alt="img" class="img-td">
+                        <p>'.$sala['nome_sala'].'</p>
+                    </div>
+                </td>
+                <td>
+                    <div class="div-td">
+                        <i class="bi bi-circle-fill-yellow darkModeEdit"> Em correção</i>
+                    </div>
+                </td>
+                <td>
+                   <div class="div-td">
+                    <p class="p-data darkModeEdit">'.date('d/m/Y', strtotime($sala['data_fechamento'])).'</p>
+                </div>
+                </td>
+                <td>
+                    <div class="div-td">
+                        <div class="progress-bar-alerta">
+                            <div class="progress-alerta"></div>
+                        </div>
+                        <p class="p-progress darkModeEdit">Ação corretiva pendente</p>
+                    </div>
+                </td>
+                <td>
+                    <div class="div-td">
+                <p class="p-docente darkModeEdit">'.$sala['nome'].'</p>
+                </div>
+                </td>
+            </tbody>';
+            }
+
 }
 
 

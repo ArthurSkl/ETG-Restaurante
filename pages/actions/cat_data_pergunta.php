@@ -17,6 +17,7 @@ if(isset($id_sala,$id_checklist)){
     
     try{
         ResponderChecklist::cadastrar($dados, $id_sala, $id_checklist);
+        Sala::setStatusSala($id_sala, 'A');
         // echo(json_encode(ResponderChecklist::cadastrar($dados, $id_sala, $id_checklist)));
         $status = true;
 
