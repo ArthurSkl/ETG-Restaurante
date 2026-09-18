@@ -32,6 +32,7 @@ class Banco{
         {
             $string_conexao = "mysql:host=".$this->db_hostname.";port=".$this->db_port.";dbname=".$this->db_name;
             $this -> conexao = new PDO($string_conexao, $this->db_user, $this->db_password);
+            $this -> conexao -> exec("SET SESSION sql_mode = ''");
         }
         catch(PDOException $e)
         {
