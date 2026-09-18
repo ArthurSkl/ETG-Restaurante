@@ -13,6 +13,7 @@ class Banco{
     private $db_name;
     private $db_user;
     private $db_password;
+    private $db_port;
     
     private $table;//variavel que vai falar sobre qual tabela do banco esta sendo tratada
     private $conexao;
@@ -23,14 +24,13 @@ class Banco{
         $this->db_name = getenv('DB_NAME') ?: (isset($config["database"]["db_name"]) ? $config["database"]["db_name"] : 'etg2');
         $this->db_user = getenv('DB_USER') ?: (isset($config["database"]["user"]) ? $config["database"]["user"] : 'root');
         $this->db_password = getenv('DB_PASSWORD') ?: (isset($config["database"]["password"]) ? $config["database"]["password"] : '');
+        $this->db_port = getenv('DB_PORT') ?: (isset($config["database"]["port"]) ? $config["database"]["port"] : '3306');
         $this -> table = $table; 
     }
     private function conectar(){
         try
         {
-            $string_conexao = "mysql:host=".$this->db_hostname;
-            $string_conexao .= ";";
-            $string_conexao .= "dbname=".$this->db_name;
+            $string_conexao = "mysql:host=".$this->db_hostname.";port=".$this->db_port.";dbname=".$this->db_name;
             $this -> conexao = new PDO($string_conexao, $this->db_user, $this->db_password);
         }
         catch(PDOException $e)
